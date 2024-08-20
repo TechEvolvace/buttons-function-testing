@@ -14,11 +14,28 @@
     <input id="number-input"><br><br>
     <button id="submit-button">Submit</button>
 
-    <h2>Result Findings</h2>
+    <h2>Results Finding!</h2>
+
+    <div> 
+        <p>For the following code:</p>
+        <pre>
+            <code>
+            let numberEntered;
+
+            document.getElementById("submit-button").onclick = function(){
+                numberEntered = document.getElementById("number-input").value;
+                console.log("You entered " + numberEntered + ".");
+                document.getElementById("display-input").textContent = "You entered " + numberEntered + "!"; 
+            }
+            </code>
+        </pre>
+    </div>
     <p>Console.log returned the number I entered successfully!</p>
+    <p>I was also able to get text displaying the number I entered showing up on the webpage!</p>
 
-    <script src="./script.js">
+    <h3>Here is where the user's input gets displayed!</h3>
+    <p id="display-input"></p>
 
-    </script>
+    <script src="./script.js"></script>
 </body>
 </html>
