@@ -11,11 +11,18 @@
 
     <!-- Experiment 1: This is where the potential user enters a number, an essential input! -->
     <div class="experiment-card"> 
+        <h2> Experiment 1: With One Input Area and Submit Button</h2>
+        <br>
         <label>Enter a number: </label>
         <input id="number-input"><br><br>
         <button id="submit-button">Submit</button>
 
         <h2>Results Finding!</h2>
+        <br>
+
+        <h3>Here is where the user's input gets displayed!</h3>
+        <p id="display-input"></p>
+        <br>
 
         <div> 
             <p>For the following code:</p>
@@ -33,13 +40,27 @@
         </div>
         <p>Console.log returned the number I entered successfully!</p>
         <p>I was also able to get text displaying the number I entered showing up on the webpage!</p>
-
-        <h3>Here is where the user's input gets displayed!</h3>
-        <p id="display-input"></p>
     </div>
 
     <!-- Experiment 2: Display -->
-    
+    <div class="experiment-card">
+        <h2> Experiment 2: With Maximum and Minimum Number Inputs</h2>
+        <br>
+        <label>Enter a maximum number: </label>
+        <input id="max-number-input"><br><br>
+        <label>Enter a minimum number: </label>
+        <input id="min-number-input"><br><br>
+        <div class="button" id="experiment-2-submit-button">
+            <p>Submit</p>
+        </div>
+
+        <h2>Here is the result of the minimum and maximum number you entered!</h2>
+        <p id="experiment-2-message"></p>
+
+        <br> 
+        <h2>Results finding!</h2>
+        <br>
+    </div>
 
     <script src="./script.js"></script>
 </body>
