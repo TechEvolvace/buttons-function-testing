@@ -64,38 +64,41 @@
             <p>For the following code:</p>
             <pre class="code-sample">
                 <code>
-                    let minNumberEntered;
-                    let maxNumberEntered;
+    let minNumberEntered;
+    let maxNumberEntered;
                     
-                    function processMaxAndMinInputs(){
-                        minNumberEntered = Number.parseInt(document.getElementById("min-number-input").value);
-                        maxNumberEntered = Number.parseInt(document.getElementById("max-number-input").value);
-                        let printResultArea = document.getElementById("experiment-2-message");
-                        printResultArea.style.backgroundColor = "whitesmoke";
-                        printResultArea.style.color = "red";
-                    
-                        let message = "";
-                    
-                        if(isNaN(minNumberEntered) || isNaN(maxNumberEntered)){
-                            if(isNaN(minNumberEntered)){
-                                message += "You haven't entered a number for a minimum number yet. Please enter a number for the minimum number!\n"; 
-                            }
+    function processMaxAndMinInputs(){
                         
-                            if(isNaN(maxNumberEntered)){
-                                message += "You haven't entered a number for a maximum number yet. Please enter a number for the maximum number!\n"; 
-                            }
-                        } else {
-                            if(maxGreaterThanMin(minNumberEntered, maxNumberEntered)){
-                                message += `All your inputs are valid.`;
-                                printResultArea.style.color = "green";
-                            } else {
-                                message += `The maximum number you entered is not greater than the minimum number you entered. Please enter a maximum number that is greater than the minimum number.`;
-                            }
-                        }
+        minNumberEntered = Number.parseInt(document.getElementById("min-number-input").value);
+        maxNumberEntered = Number.parseInt(document.getElementById("max-number-input").value);
+        let printResultArea = document.getElementById("experiment-2-message");
+        printResultArea.style.backgroundColor = "whitesmoke";
+        printResultArea.style.color = "red";
+        let message = "";
+                    
+        if(isNaN(minNumberEntered) || isNaN(maxNumberEntered)){
+            
+            if(isNaN(minNumberEntered)){
+                message += "You haven't entered a number for a minimum number yet. Please enter a number for the minimum number!\n"; 
+            }
                         
-                        printResultArea.textContent = message;    
-                        printResultArea.setAttribute(messageColor);
-                    }
+            if(isNaN(maxNumberEntered)){
+                message += "You haven't entered a number for a maximum number yet. Please enter a number for the maximum number!\n"; 
+            } else {
+                if(maxGreaterThanMin(minNumberEntered, maxNumberEntered)){
+                    message += `All your inputs are valid.`;
+                    printResultArea.style.color = "green";
+                } else {
+                    message += `The maximum number you entered is not greater than the minimum number you entered. Please enter a maximum number that is greater than the minimum number.`;
+                }
+            }
+                        
+            printResultArea.textContent = message;    
+            printResultArea.setAttribute(messageColor);
+        }
+    }
+    
+    document.getElementById("experiment-2-submit-button").addEventListener('click', processMaxAndMinInputs);
                 </code>
             </pre>
         </div>
@@ -123,6 +126,37 @@
         <h2>Here is the result of the minimum and maximum number you entered!</h2>
         <div class="message-area" id="experiment-3-message">
             <!-- This is where a p element containing the message will appear for Experiment 3! -->
+        </div>
+
+        <div> 
+            <p>For the following code:</p>
+            <pre class="code-sample">
+                <code>
+    let experimentThreeInput;
+    let displayExperiment3Message = document.createElement("p");
+    let displayExperiment3MessageArea = document.getElementById("experiment-3-message");
+    displayExperiment3MessageArea.appendChild(displayExperiment3Message);
+
+    function printInputType(){
+
+        displayExperiment3MessageArea.style.backgroundColor = 'rgb(155, 237, 255)';
+        displayExperiment3Message.style.fontSize = "26px";
+        displayExperiment3Message.style.color = "rgb(255, 87, 51)";
+        let experimentThreeInput = document.getElementById("experiment-3-number").value;
+
+        if(!(isNaN(experimentThreeInput))){
+            console.log(`userInput value is an actual number`);
+            displayExperiment3Message.textContent = "user's input here is actually an number!";
+        } else {
+            console.log(`userInput value is not an actual number`);
+            displayExperiment3Message.textContent = "user's input here is actually not an number!";
+        }
+
+        }
+
+    document.getElementById("experiment-3-button").addEventListener('click', printInputType);
+                </code>
+            </pre>
         </div>
 
         <br> 

@@ -53,15 +53,13 @@ let displayExperiment3Message = document.createElement("p");
 let displayExperiment3MessageArea = document.getElementById("experiment-3-message");
 displayExperiment3MessageArea.appendChild(displayExperiment3Message);
 
+/* Function used in Experiment 3 */
 function printInputType(){
-   displayExperiment3MessageArea.style.backgroundColor = 'rgb(155, 237, 255)';
 
+   displayExperiment3MessageArea.style.backgroundColor = 'rgb(155, 237, 255)';
    displayExperiment3Message.style.fontSize = "26px";
    displayExperiment3Message.style.color = "rgb(255, 87, 51)";
-
    let experimentThreeInput = document.getElementById("experiment-3-number").value;
-   console.log(`value of input for Experiment 3: ${experimentThreeInput}`);
-   console.log(`type of value of input for Experiment 3: ${typeof experimentThreeInput}`);
 
    if(!(isNaN(experimentThreeInput))){
         console.log(`userInput value is an actual number`);
@@ -70,6 +68,7 @@ function printInputType(){
         console.log(`userInput value is not an actual number`);
         displayExperiment3Message.textContent = "user's input here is actually not an number!";
    }
+
 }
 
 document.getElementById("experiment-3-button").addEventListener('click', printInputType);
