@@ -60,6 +60,54 @@
         <br> 
         <h2>Results finding!</h2>
         <br>
+        <div> 
+            <p>For the following code:</p>
+            <pre class="code-sample">
+                <code>
+                    let minNumberEntered;
+                    let maxNumberEntered;
+                    
+                    function processMaxAndMinInputs(){
+                        minNumberEntered = Number.parseInt(document.getElementById("min-number-input").value);
+                        maxNumberEntered = Number.parseInt(document.getElementById("max-number-input").value);
+                        let printResultArea = document.getElementById("experiment-2-message");
+                        printResultArea.style.backgroundColor = "whitesmoke";
+                        printResultArea.style.color = "red";
+                    
+                        let message = "";
+                    
+                        if(isNaN(minNumberEntered) || isNaN(maxNumberEntered)){
+                            if(isNaN(minNumberEntered)){
+                                message += "You haven't entered a number for a minimum number yet. Please enter a number for the minimum number!\n"; 
+                            }
+                        
+                            if(isNaN(maxNumberEntered)){
+                                message += "You haven't entered a number for a maximum number yet. Please enter a number for the maximum number!\n"; 
+                            }
+                        } else {
+                            if(maxGreaterThanMin(minNumberEntered, maxNumberEntered)){
+                                message += `All your inputs are valid.`;
+                                printResultArea.style.color = "green";
+                            } else {
+                                message += `The maximum number you entered is not greater than the minimum number you entered. Please enter a maximum number that is greater than the minimum number.`;
+                            }
+                        }
+                        
+                        printResultArea.textContent = message;    
+                        printResultArea.setAttribute(messageColor);
+                    }
+                </code>
+            </pre>
+        </div>
+
+        <p>User input for the input areas will always be received as a String unless it's explicitly parsed into an Integer.</p>
+        <p>After a Number.parseInt() command is used to convert the value of the input entered in a specific input area, it will be a NaN [Not a Number] 
+            only when the user doesn't enter anything in the input area or when the user enters a non-number input! We can take advantage of this by checking 
+            if that input is a number through isNaN() command and display an appropriate message of the user hasn't enter anything for that input area!
+        </p>
+        <p> In the end, this was able to display the correct message and change the message color to an appropriate one based on the two number the user entered
+            for this experiment! 
+        </p>
     </div>
 
     <script src="./script.js"></script>
