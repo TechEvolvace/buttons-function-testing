@@ -19,11 +19,13 @@ body{
     box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2); 
 }
 
+/* Design the area that contains the code snippet */
 .code-sample{
     background-color:midnightblue;
     color: #FFFF33;
 }
 
+/* Design the buttons */ 
 .button{
     display: flex;
     background-color:rgb(43, 167, 43);
@@ -35,10 +37,20 @@ body{
     border-radius: 20px;
 }
 
+/* Design the Experiment 2's message results area */
 #experiment-2-message{
     display: flex; 
     width: 25%;
     height: 12%;
     flex-wrap: wrap;
     padding: 10px 10px;
+}
+
+/* Design message area for an experiment, primarily used by Experiment 3 */
+.message-area{
+    display: flex;
+    flex-wrap: wrap;
+    height: 16%;
+    padding: 10px 10px; 
+    border: 2pt dashed blue; 
 }
