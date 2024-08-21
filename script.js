@@ -1,27 +1,48 @@
-let numberEntered; 
+let numberEntered;
 
+/* This function is used in Experiment 1 */
 document.getElementById("submit-button").onclick = function(){
     numberEntered = document.getElementById("number-input").value;
     console.log("You entered " + numberEntered + ".");
     document.getElementById("display-input").textContent = "You entered " + numberEntered + "!"; 
 }
 
-let maxNumberEntered;
 let minNumberEntered;
+let maxNumberEntered;
 
+/* This function is used in Experiment 2 */
 function processMaxAndMinInputs(){
-    maxNumberEntered = document.getElementById("max-number-input").value;
-    minNumberEntered = document.getElementById("min-number-input").value;
-    let printResultArea = document.getElementById("experiment-2-message"); 
-    if(isNaN(maxNumberEntered) || isNaN(minNumberEntered)){
-        printResultArea.textContent = (isNaN(maxNumberEntered) ? `Your input of ${maxNumberEntered} for the maximum number is not a number. Please enter a different number for a maximum number` 
-        : isNaN(minNumberEntered) ? `Your input of ${minNumberEntered} for the minimum number is not a number. Please enter a different number for a minimum number` 
-        : `Your input of ${minNumberEntered} for the minimum number and ${maxNumberEntered} for the maximum number are both not numbers! Please enter different numbers!`); 
-    } else if(maxNumberEntered <= minNumberEntered){
-        printResultArea.textContent = `The number you entered for the maximum number ${maxNumberEntered} is not greater than the minimum number you entered. Please enter a different maximum number that is greater than the minimum number you entered.`;
+    minNumberEntered = Number.parseInt(document.getElementById("min-number-input").value);
+    maxNumberEntered = Number.parseInt(document.getElementById("max-number-input").value);
+    let printResultArea = document.getElementById("experiment-2-message");
+    printResultArea.style.backgroundColor = "whitesmoke";
+    printResultArea.style.color = "red";
+
+    let message = "";
+
+    if(isNaN(minNumberEntered) || isNaN(maxNumberEntered)){
+        if(isNaN(minNumberEntered)){
+            message += "You haven't entered a number for a minimum number yet. Please enter a number for the minimum number!\n"; 
+        }
+    
+        if(isNaN(maxNumberEntered)){
+            message += "You haven't entered a number for a maximum number yet. Please enter a number for the maximum number!\n"; 
+        }
     } else {
-        printResultArea.textContent = `Minimum number you entered: ${minNumberEntered}, Maximum number you entered: ${maxNumberEntered}; These are both valid inputs!`;
+        if(maxGreaterThanMin(minNumberEntered, maxNumberEntered)){
+            message += `All your inputs are valid.`;
+            printResultArea.style.color = "green";
+        } else {
+            message += `The maximum number you entered is not greater than the minimum number you entered. Please enter a maximum number that is greater than the minimum number.`;
+        }
     }
+    
+    printResultArea.textContent = message;    
+    printResultArea.setAttribute(messageColor);
+}
+
+function maxGreaterThanMin(min, max){
+    return max > min; 
 }
 
 document.getElementById("experiment-2-submit-button").addEventListener('click', processMaxAndMinInputs);
