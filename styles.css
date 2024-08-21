@@ -30,6 +30,15 @@ body{
     justify-content: center;
     color: white;
     font-size: 16pt;
-    width: 15%;
-    height: 15%;
+    width: 8%;
+    height: 8%;
+    border-radius: 20px;
+}
+
+#experiment-2-message{
+    display: flex; 
+    width: 25%;
+    height: 12%;
+    flex-wrap: wrap;
+    padding: 10px 10px;
 }
