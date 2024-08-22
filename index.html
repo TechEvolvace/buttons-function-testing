@@ -162,16 +162,15 @@
         <br> 
         <h2>Results finding!</h2>
         <p>
-          When Input Area is left empty, apparently it displays that it is actually a number, instead of the expected "It is actually not a number". 
-          <br>
-          <ol>
-            <li>When a user enters an input into the input area, the .value command receives the value inside that input area as a string.</li>
-            <li>The isNaN command first converts that string value into a number before checking if that is not a number and returns the appropriate boolean value.</li>
-          <ol>
-          <br>
-          Thus, when the user leaves nothing in the input area, the empty "" string value is converted to a number of 0. This number 0 is then what isNaN checks to 
-          see if it's not a number, which returns false. Thus, the message "It is actually a number." gets shown despite not having any number in that input area! 
-          To prevent this, consider having the input area converts from type "text" to type "number" instead! 
+            When Input Area is left empty, apparently it displays that it is actually a number, instead of the expected "It is actually not a number". 
+            <br>
+            <ol>
+                <li>When a user enters an input into the input area, the .value command receives the value inside that input area as a string.</li>
+                <li>The isNaN command first converts that string value into a number before checking if that is not a number and returns the appropriate boolean value.</li>
+            </ol>  
+            Thus, when the user leaves nothing in the input area, the empty "" string value is converted to a number of 0. This number 0 is then what isNaN checks to 
+            see if it's not a number, which returns false. Thus, the message "It is actually a number." gets shown despite not having any number in that input area! 
+            To prevent this, consider having the input area converts from type "text" to type "number" instead! 
         </p>
 
     </div>
