@@ -72,3 +72,21 @@ function printInputType(){
 }
 
 document.getElementById("experiment-3-button").addEventListener('click', printInputType);
+
+/* Experiment 4 */
+let experimentFourInput;
+
+function showOnlyNumberInputs(){
+
+    let displayExperimentFourMessage = document.getElementById("experiment-4-message"); 
+    experimentFourInput = document.getElementById("experiment-4-number").value;
+    
+    if(experimentFourInput == "" || experimentFourInput == null){
+        displayExperimentFourMessage.textContent = `You haven't input any numbers yet. Please enter a number.`; 
+    } else if((isNaN(experimentFourMessage))) {
+        displayExperimentFourMessage.textContent = `Your input of ${experimentFourInput} is not a number. Please enter a number.`
+    } else {
+        displayExperimentFourMessage.textContent = `Your input of ${experimentFourInput} is a number now. Your input is valid.`;
+    }
+    
+}
