@@ -76,6 +76,7 @@ document.getElementById("experiment-3-button").addEventListener('click', printIn
 /* Experiment 4 */
 let experimentFourInput;
 
+/* Function used in Experiment 4 */
 function showOnlyNumberInputs(){
 
     console.log("Button successfully clicked, and this is now starting to process the input!");
