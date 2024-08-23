@@ -54,3 +54,10 @@ body{
     padding: 10px 10px; 
     border: 2pt dashed blue; 
 }
+
+.response-area{
+    display: block; 
+    height: 18% auto; 
+    padding: 10px 10px; 
+    background-color: radial-gradient(#7FFFDD, #B3BEFF);
+}

@@ -17,15 +17,15 @@
         <input id="number-input"><br><br>
         <button id="submit-button">Submit</button>
 
-        <h2>Results Finding!</h2>
-        <br>
-
         <h3>Here is where the user's input gets displayed!</h3>
         <p id="display-input"></p>
         <br>
 
+        <h3>Results Finding!</h3>
+        <br>
+
         <div> 
-            <p>For the following code:</p>
+            <h4>For the following code:</h4>
             <pre class="code-sample">
                 <code>
                 let numberEntered;
@@ -54,14 +54,14 @@
             <p>Submit</p>
         </div>
 
-        <h2>Here is the result of the minimum and maximum number you entered!</h2>
+        <h3>Here is the result of the minimum and maximum number you entered!</h3>
         <p id="experiment-2-message"></p>
 
         <br> 
-        <h2>Results finding!</h2>
+        <h3>Results finding!</h3>
         <br>
         <div> 
-            <p>For the following code:</p>
+            <h4>For the following code:</h4>
             <pre class="code-sample">
                 <code>
     let minNumberEntered;
@@ -123,13 +123,13 @@
             <p>Confirm</p>
         </div>
 
-        <h2>Here is the result of the minimum and maximum number you entered!</h2>
+        <h3>Here is the result of the minimum and maximum number you entered!</h3>
         <div class="message-area" id="experiment-3-message">
             <!-- This is where a p element containing the message will appear for Experiment 3! -->
         </div>
 
         <div> 
-            <p>For the following code:</p>
+            <h4>For the following code:</h4>
             <pre class="code-sample">
                 <code>
     let experimentThreeInput;
@@ -160,7 +160,7 @@
         </div>
 
         <br> 
-        <h2>Results finding!</h2>
+        <h3>Results finding!</h3>
         <p>
             When Input Area is left empty, apparently it displays that it is actually a number, instead of the expected "It is actually not a number". 
             <br>
@@ -172,6 +172,54 @@
             see if it's not a number, which returns false. Thus, the message "It is actually a number." gets shown despite not having any number in that input area! 
             To prevent this, consider having the input area converts from type "text" to type "number" instead! 
         </p>
+
+    </div>
+
+    <div class="experiment-card">
+
+        <h2>Experiment 4: Prevent Empty Inputs</h2>
+        
+        <label>Enter a number: </label>
+        <input type="text" id="experiment-4-number"><br><br>
+        <button class="button" onclick="showOnlyNumberInputs()">Confirm Number</button>
+
+        <div class="response-area">
+            <h4>Here is the result of the number you just entered!</h4>
+            <p id="experiment-4-message"></p>
+        </div>
+
+        <div> 
+            <h3>For the following code:</h3>
+            <h4>Index.html code</h2>
+            <ul>
+                <li>Button for Experiment 4 has onclick property that links to the showOnlyNumberInputs function in Script.js code!</li>
+                <li>The onclick property enables to call the showOnlyNumberInputs function only after the user clicks on this particular "Confirm Number" button! </li>
+                <li>This acheives the same result as using a addEventListener to this button in the Script.js code with the following arguments: 'click' and showOnlyNumberInputs()</li>
+            </ul>
+
+            <h4>Script.js code</h4>
+            <pre class="code-sample">
+                <code>
+    let experimentFourInput;
+
+    function showOnlyNumberInputs(){
+    
+        console.log("Button successfully clicked, and this is now starting to process the input!");
+        let displayExperimentFourMessage = document.getElementById("experiment-4-message"); 
+        experimentFourInput = document.getElementById("experiment-4-number").value;
+        
+        if(experimentFourInput === "" || experimentFourInput === null){
+            displayExperimentFourMessage.textContent = `You haven't input any numbers yet. Please enter a number.`; 
+        } else if((isNaN(experimentFourInput))) {
+            displayExperimentFourMessage.textContent = `Your input of ${experimentFourInput} is not a number. Please enter a number.`
+        } else {
+            displayExperimentFourMessage.textContent = `Your input of ${experimentFourInput} is a number now. Your input is valid.`;
+        }
+        
+    }
+                </code>
+            </pre>
+        </div>
 
     </div>
 
