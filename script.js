@@ -78,12 +78,13 @@ let experimentFourInput;
 
 function showOnlyNumberInputs(){
 
+    console.log("Button successfully clicked, and this is now starting to process the input!");
     let displayExperimentFourMessage = document.getElementById("experiment-4-message"); 
     experimentFourInput = document.getElementById("experiment-4-number").value;
     
-    if(experimentFourInput == "" || experimentFourInput == null){
+    if(experimentFourInput === "" || experimentFourInput === null){
         displayExperimentFourMessage.textContent = `You haven't input any numbers yet. Please enter a number.`; 
-    } else if((isNaN(experimentFourMessage))) {
+    } else if((isNaN(experimentFourInput))) {
         displayExperimentFourMessage.textContent = `Your input of ${experimentFourInput} is not a number. Please enter a number.`
     } else {
         displayExperimentFourMessage.textContent = `Your input of ${experimentFourInput} is a number now. Your input is valid.`;
