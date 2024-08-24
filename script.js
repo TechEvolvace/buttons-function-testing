@@ -92,3 +92,41 @@ function showOnlyNumberInputs(){
     }
     
 }
+
+/* Experiment 5  */
+let itemList = []; 
+
+/* 
+    Will ensure that only new items that are not already 
+    in the list will be added to the list!
+*/
+function addItemToList(event){
+    event.preventDefault();
+    let itemInput = document.getElementById("itemName").value; 
+    let displayItemResult = document.getElementById("experiment-5-message"); 
+    if(itemInput === ""){
+        displayItemResult.textContent = `You didn't enter any inputs, so nothing has been added to the list!`;
+    } else if(itemList.includes(itemInput)){
+        displayItemResult.textContent = `You already have ${itemInput} in the list already, so this will not add another ${itemInput} to the list!`;
+    } else {
+        itemList.push(itemInput);
+        displayItemResult.textContent = `You successfully added ${itemInput} to the list of items!`; 
+    }
+}
+
+/*
+    When corresponding button is clicked, this will display
+    a message with all the items in the list shown! 
+*/
+function showAllListItems(event){
+    console.log('Show All List Items function has been triggered!');
+    event.preventDefault();
+    let displayItemResult = document.getElementById("experiment-5-message"); 
+    let message = "Items in the list: "; 
+    if(itemList.length === 0){
+        message = `You don't have any thing in the list yet.`;
+    } else {
+        itemList.forEach((item) => message += `${item} `);
+    }
+    displayItemResult.textContent = message; 
+}
