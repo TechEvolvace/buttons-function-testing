@@ -223,6 +223,20 @@
 
     </div>
 
+    <div class="experiment-card">
+        <h2>Experiment 5: Using keyword required to only accept non-empty inputs for users for shopping list!</h2>
+        <form>
+            <label for="itemName">Enter the name of your desired item:</label>
+            <input type="text" id="itemName" required>
+            <button onclick="addItemToList(event)">Add Item to List</button> 
+        </form>
+
+        <div class="response-area">
+            <h4>Here is the result of the item you just entered!</h4>
+            <p id="experiment-5-message"></p>
+        </div>
+    </div>
+
     <script src="./script.js"></script>
 </body>
 </html>

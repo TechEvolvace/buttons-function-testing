@@ -92,3 +92,13 @@ function showOnlyNumberInputs(){
     }
     
 }
+
+/* Experiment 5  */
+let itemList = []; 
+
+function addItemToList(event){
+    let itemInput = document.getElementById("itemName").value; 
+    let displayItemResult = document.getElementById("experiment-5-message"); 
+    event.preventDefault();
+    displayItemResult.textContent = `You successfully added ${itemInput} to the list of items!`; 
+}
