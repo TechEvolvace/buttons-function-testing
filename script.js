@@ -97,8 +97,27 @@ function showOnlyNumberInputs(){
 let itemList = []; 
 
 function addItemToList(event){
+    event.preventDefault();
     let itemInput = document.getElementById("itemName").value; 
     let displayItemResult = document.getElementById("experiment-5-message"); 
+    if(itemInput === ""){
+        displayItemResult.textContent = `You didn't enter any inputs, so nothing has been added to the list!`;
+    } else if(itemList.includes(itemInput)){
+        displayItemResult.textContent = `You already have ${itemInput} in the list already, so this will not add another ${itemInput} to the list!`;
+    } else {
+        itemList.push(itemInput);
+        displayItemResult.textContent = `You successfully added ${itemInput} to the list of items!`; 
+    }
+}
+
+function showAllListItems(event){
     event.preventDefault();
-    displayItemResult.textContent = `You successfully added ${itemInput} to the list of items!`; 
+    let displayItemResult = document.getElementById("experiment-5-message"); 
+    let message = "Items in the list: "; 
+    if(itemList.size() === 0){
+        message = `You don't have any thing in the list yet.`;
+    } else {
+        itemList.forEach((item) => message += `${item} `);
+    }
+    displayItemResult.textContent = message; 
 }
