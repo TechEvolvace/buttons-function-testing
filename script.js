@@ -97,10 +97,11 @@ function showOnlyNumberInputs(){
 let itemList = []; 
 
 /* 
-    Will ensure that only new items that are not already 
-    in the list will be added to the list!
+    When the add item to list button is clicked, this Will ensure that only 
+    new items that are not already in the list will be added to the list!
 */
 function addItemToList(event){
+
     event.preventDefault();
     let itemInput = document.getElementById("itemName").value; 
     let displayItemResult = document.getElementById("experiment-5-message"); 
@@ -112,14 +113,15 @@ function addItemToList(event){
         itemList.push(itemInput);
         displayItemResult.textContent = `You successfully added ${itemInput} to the list of items!`; 
     }
+
 }
 
 /*
-    When corresponding button is clicked, this will display
+    When the showAllListItems button is clicked, this will display
     a message with all the items in the list shown! 
 */
 function showAllListItems(event){
-    console.log('Show All List Items function has been triggered!');
+
     event.preventDefault();
     let displayItemResult = document.getElementById("experiment-5-message"); 
     let message = "Items in the list: "; 
@@ -129,4 +131,27 @@ function showAllListItems(event){
         itemList.forEach((item) => message += `${item} `);
     }
     displayItemResult.textContent = message; 
+    
+}
+
+/*
+    When the remove button is clicked, this will check whether it's possible to remove
+    the item from the list based on the name of the item the user entered before 
+    removing the item from the list. This also displays an appropriate message 
+    based on what kind of item is specified to be removed from the list! 
+*/
+function removeItemFromList(event){
+
+    event.preventDefault();
+    let itemInput = document.getElementById("itemName").value; 
+    let displayItemResult = document.getElementById("experiment-5-message");
+    if(itemInput === ""){
+        displayItemResult.textContent = `You haven't entered any name of an item yet!`;
+    } else if(!itemList.includes(itemInput)){
+        displayItemResult.textContent = `The item you specified, ${itemInput}, to remove is not on the list.`; 
+    } else {
+        itemList = itemList.filter((item) => item !== itemInput);
+        displayItemResult.textContent = `The item you specified, ${itemInput}, is succesfully removed from the list!`;
+    }
+
 }
