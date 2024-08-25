@@ -101,6 +101,7 @@ let itemList = [];
     new items that are not already in the list will be added to the list!
 */
 function addItemToList(event){
+
     event.preventDefault();
     let itemInput = document.getElementById("itemName").value; 
     let displayItemResult = document.getElementById("experiment-5-message"); 
@@ -112,6 +113,7 @@ function addItemToList(event){
         itemList.push(itemInput);
         displayItemResult.textContent = `You successfully added ${itemInput} to the list of items!`; 
     }
+
 }
 
 /*
@@ -119,6 +121,7 @@ function addItemToList(event){
     a message with all the items in the list shown! 
 */
 function showAllListItems(event){
+
     event.preventDefault();
     let displayItemResult = document.getElementById("experiment-5-message"); 
     let message = "Items in the list: "; 
@@ -128,6 +131,7 @@ function showAllListItems(event){
         itemList.forEach((item) => message += `${item} `);
     }
     displayItemResult.textContent = message; 
+    
 }
 
 /*
@@ -137,7 +141,7 @@ function showAllListItems(event){
     based on what kind of item is specified to be removed from the list! 
 */
 function removeItemFromList(event){
-    
+
     event.preventDefault();
     let itemInput = document.getElementById("itemName").value; 
     let displayItemResult = document.getElementById("experiment-5-message");
