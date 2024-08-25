@@ -27,3 +27,13 @@ Experiment 1 - 5 are now completely functional as intended!
     * Despite not using the explicit HTML button element, the addEventListener function was able to make the div element act like a button that when clicked upon will run the function needed for Experiment 2! 
     * The type="number" explicitly prohibits the user from entering any non-number characters here! 
     * The parseInt helps convert the string value of the number entered from the .value command to an integer! 
+
+## Experiment 3 
+* Attempts to display a message that determines whether the "number" the user entered is a number or not 
+* Used the type="text" for the input areas for this experiment, instead of type="number" 
+* Used a makeshift div element and styling to create an area that looks like a button to be clicked on, similar to Experiment 2! 
+* Findings: 
+    * It does determine whether the input is a number or not
+    * The one issue is that it determines an empty string as an actual number, when it shouldn't. 
+        * This is because isNaN attempts to convert a string input into a number before checking if that new value is a number or not. 
+        * An empty string when converted into a number is 0, which is acutally a number. This 0 is the value that isNaN checks if it's a number input or not, not the empty string "" value! 
