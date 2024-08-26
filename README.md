@@ -43,4 +43,14 @@ Experiment 1 - 5 are now completely functional as intended!
         * An empty string when converted into a number is 0, which is acutally a number. This 0 is the value that isNaN checks if it's a number input or not, not the empty string "" value! 
 
 ## Experiment 4 
-* 
+* Attempts to fix the empty string input as a valid number issue in Experiment 3 
+* This experiment asks the user to enter a number input similar to Experiment 3! 
+* Styled the div class for both the button and the display area, similar to Experiment 3! 
+* Findings: 
+    * By first checking if the input value extracted from the input area by the .value property is strictly equal to the empty string "" before displaying a message, there will now be a different message when the user hasn't entered anything in the input area.
+
+## Experiment 5 
+* Used the HTML form element to structure the input areas and buttons more cleanly 
+* The function passed to the onclick property for all the buttons involved in Experiment 5 also passed in event as the parameter! 
+* Findings: 
+    * By using the event parameter when calling their respective functions, we were able to call upon event.preventDefault() to avoid the issue of reloading the page! This ensures that the intended message gets displayed on the website! 
