@@ -1,8 +1,12 @@
 # Testing Grounds for Buttons and Getting Inputs 
 
-It's time to set an experimenting ground for discovering unique ways to get user inputs. 
+**It's time to set an experimenting ground for discovering unique ways to get user inputs.** 
 
-## Update: 
+## The Details 
+* I'll record details about each experiment and their findings in this README file and in the user input testing website itself! 
+* I'll also paste relevant code snippets for each experiment in this testing ground website, but you can take a look at the provided script.js file and see the comments designating each part of the code for which experiment! 
+
+## Important Updates: 
 
 Experiment 1 - 5 are now completely functional as intended! 
 
@@ -23,7 +27,7 @@ Experiment 1 - 5 are now completely functional as intended!
 * Used the parseInt to first convert the extracted value from the input areas into a number 
 * Used the isNaN to check if the input is a number or not 
 * Findings:
-    * the addEventListener function behaves similar to adding the onclick property to a specific element, which is the button for Experiment 2 
+    * The addEventListener function behaves similar to adding the onclick property to a specific element, which is the button for Experiment 2 
     * Despite not using the explicit HTML button element, the addEventListener function was able to make the div element act like a button that when clicked upon will run the function needed for Experiment 2! 
     * The type="number" explicitly prohibits the user from entering any non-number characters here! 
     * The parseInt helps convert the string value of the number entered from the .value command to an integer! 
@@ -37,3 +41,6 @@ Experiment 1 - 5 are now completely functional as intended!
     * The one issue is that it determines an empty string as an actual number, when it shouldn't. 
         * This is because isNaN attempts to convert a string input into a number before checking if that new value is a number or not. 
         * An empty string when converted into a number is 0, which is acutally a number. This 0 is the value that isNaN checks if it's a number input or not, not the empty string "" value! 
+
+## Experiment 4 
+* 
