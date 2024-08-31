@@ -3,6 +3,19 @@ body{
     color: white; 
 }
 
+/* Designed the navigation bar that includes the header */
+nav{
+    display: flex;
+    flex-direction: row; 
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+/* Designed the header */
+header{
+    font-size: 1.1rem;
+}
+
 /* Design for card that encompases an experiment for this testing ground */
 .experiment-card{
     background-color: #FAD0AD; 
