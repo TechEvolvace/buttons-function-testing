@@ -7,63 +7,65 @@
     <link rel="stylesheet" href="./styles.css">
 </head>
 <body>
-    <h1>Testing area for Getting Inputs from Input Areas and Submit Button Functionality!</h1>
+    <nav>
+        <header><h1>Testing Area for Getting Inputs from Input Areas and Submit Button Functionality!</h1></header>
+    </nav>
 
-    <!-- Experiment 1: This is where the potential user enters a number, an essential input! -->
-    <div class="experiment-card"> 
-        <h2> Experiment 1: With One Input Area and Submit Button</h2>
-        <br>
-        <label>Enter a number: </label>
-        <input id="number-input"><br><br>
-        <button id="submit-button">Submit</button>
+    <main>
+        <!-- Experiment 1: This is where the potential user enters a number, an essential input! -->
+        <div class="experiment-card"> 
+            <h2> Experiment 1: With One Input Area and Submit Button</h2>
+            <br>
+            <label>Enter a number: </label>
+            <input id="number-input"><br><br>
+            <button id="submit-button">Submit</button>
 
-        <h3>Here is where the user's input gets displayed!</h3>
-        <p id="display-input"></p>
-        <br>
+            <h3>Here is where the user's input gets displayed!</h3>
+            <p id="display-input"></p>
+            <br>
 
-        <h3>Results Finding!</h3>
-        <br>
+            <h3>Results Finding!</h3>
+            <br>
 
-        <div> 
-            <h4>For the following code:</h4>
-            <pre class="code-sample">
+            <div> 
+                <h4>For the following code:</h4>
+                <pre class="code-sample">
                 <code>
-                let numberEntered;
+    let numberEntered;
 
-                document.getElementById("submit-button").onclick = function(){
-                    numberEntered = document.getElementById("number-input").value;
-                    console.log("You entered " + numberEntered + ".");
-                    document.getElementById("display-input").textContent = "You entered " + numberEntered + "!"; 
-                }
+    document.getElementById("submit-button").onclick = function(){
+        numberEntered = document.getElementById("number-input").value;
+        console.log("You entered " + numberEntered + ".");
+        document.getElementById("display-input").textContent = "You entered " + numberEntered + "!"; 
+    }
                 </code>
-            </pre>
-        </div>
-        <p>Console.log returned the number I entered successfully!</p>
-        <p>I was also able to get text displaying the number I entered showing up on the webpage!</p>
-    </div>
-
-    <!-- Experiment 2: Display -->
-    <div class="experiment-card">
-        <h2> Experiment 2: With Maximum and Minimum Number Inputs</h2>
-        <br>
-        <label>Enter a minimum number: </label>
-        <input type="number" id="min-number-input"><br><br>
-        <label>Enter a maximum number: </label>
-        <input type="number" id="max-number-input"><br><br>
-        <div class="button" id="experiment-2-submit-button">
-            <p>Submit</p>
+            </div>
+            <p>Console.log returned the number I entered successfully!</p>
+            <p>I was also able to get text displaying the number I entered showing up on the webpage!</p>
         </div>
 
-        <h3>Here is the result of the minimum and maximum number you entered!</h3>
-        <p id="experiment-2-message"></p>
+        <!-- Experiment 2: Display -->
+        <div class="experiment-card">
+            <h2> Experiment 2: With Maximum and Minimum Number Inputs</h2>
+            <br>
+            <label>Enter a minimum number: </label>
+            <input type="number" id="min-number-input"><br><br>
+            <label>Enter a maximum number: </label>
+            <input type="number" id="max-number-input"><br><br>
+            <div class="button" id="experiment-2-submit-button">
+                <p>Submit</p>
+            </div>
 
-        <br> 
-        <h3>Results finding!</h3>
-        <br>
-        <div> 
-            <h4>For the following code:</h4>
-            <pre class="code-sample">
-                <code>
+            <h3>Here is the result of the minimum and maximum number you entered!</h3>
+            <p id="experiment-2-message"></p>
+
+            <br> 
+            <h3>Results finding!</h3>
+            <br>
+            <div> 
+                <h4>For the following code:</h4>
+                <pre class="code-sample">
+                    <code>
     let minNumberEntered;
     let maxNumberEntered;
                     
@@ -99,39 +101,39 @@
     }
     
     document.getElementById("experiment-2-submit-button").addEventListener('click', processMaxAndMinInputs);
-                </code>
-            </pre>
+                    </code>
+                </pre>
+            </div>
+
+            <p>User input for the input areas will always be received as a String unless it's explicitly parsed into an Integer.</p>
+            <p>After a Number.parseInt() command is used to convert the value of the input entered in a specific input area, it will be a NaN [Not a Number] 
+                only when the user doesn't enter anything in the input area or when the user enters a non-number input! We can take advantage of this by checking 
+                if that input is a number through isNaN() command and display an appropriate message of the user hasn't enter anything for that input area!
+            </p>
+            <p> In the end, this was able to display the correct message and change the message color to an appropriate one based on the two number the user entered
+                for this experiment! 
+            </p>
         </div>
 
-        <p>User input for the input areas will always be received as a String unless it's explicitly parsed into an Integer.</p>
-        <p>After a Number.parseInt() command is used to convert the value of the input entered in a specific input area, it will be a NaN [Not a Number] 
-            only when the user doesn't enter anything in the input area or when the user enters a non-number input! We can take advantage of this by checking 
-            if that input is a number through isNaN() command and display an appropriate message of the user hasn't enter anything for that input area!
-        </p>
-        <p> In the end, this was able to display the correct message and change the message color to an appropriate one based on the two number the user entered
-            for this experiment! 
-        </p>
-    </div>
+        <!-- Experiment 3: Identified type of input and display the input's type -->
+        <div class="experiment-card">
+            <h2> Experiment 3: Display Data Type of Number Input Entered</h2><br>
 
-    <!-- Experiment 3: Identified type of input and display the input's type -->
-    <div class="experiment-card">
-        <h2> Experiment 3: Display Data Type of Number Input Entered</h2><br>
+            <label>Enter a number: </label>
+            <input type="text" id="experiment-3-number"><br><br>
+            <div class="button" id="experiment-3-button">
+                <p>Confirm</p>
+            </div>
 
-        <label>Enter a number: </label>
-        <input type="text" id="experiment-3-number"><br><br>
-        <div class="button" id="experiment-3-button">
-            <p>Confirm</p>
-        </div>
+            <h3>Here is the result of the minimum and maximum number you entered!</h3>
+            <div class="message-area" id="experiment-3-message">
+                <!-- This is where a p element containing the message will appear for Experiment 3! -->
+            </div>
 
-        <h3>Here is the result of the minimum and maximum number you entered!</h3>
-        <div class="message-area" id="experiment-3-message">
-            <!-- This is where a p element containing the message will appear for Experiment 3! -->
-        </div>
-
-        <div> 
-            <h4>For the following code:</h4>
-            <pre class="code-sample">
-                <code>
+            <div> 
+                <h4>For the following code:</h4>
+                <pre class="code-sample">
+                    <code>
     let experimentThreeInput;
     let displayExperiment3Message = document.createElement("p");
     let displayExperiment3MessageArea = document.getElementById("experiment-3-message");
@@ -155,51 +157,51 @@
         }
 
     document.getElementById("experiment-3-button").addEventListener('click', printInputType);
-                </code>
-            </pre>
+                    </code>
+                </pre>
+            </div>
+
+            <br> 
+            <h3>Results finding!</h3>
+            <p>
+                When Input Area is left empty, apparently it displays that it is actually a number, instead of the expected "It is actually not a number". 
+                <br>
+                <ol>
+                    <li>When a user enters an input into the input area, the .value command receives the value inside that input area as a string.</li>
+                    <li>The isNaN command first converts that string value into a number before checking if that is not a number and returns the appropriate boolean value.</li>
+                </ol>  
+                Thus, when the user leaves nothing in the input area, the empty "" string value is converted to a number of 0. This number 0 is then what isNaN checks to 
+                see if it's not a number, which returns false. Thus, the message "It is actually a number." gets shown despite not having any number in that input area! 
+                To prevent this, consider having the input area converts from type "text" to type "number" instead! 
+            </p>
+
         </div>
 
-        <br> 
-        <h3>Results finding!</h3>
-        <p>
-            When Input Area is left empty, apparently it displays that it is actually a number, instead of the expected "It is actually not a number". 
-            <br>
-            <ol>
-                <li>When a user enters an input into the input area, the .value command receives the value inside that input area as a string.</li>
-                <li>The isNaN command first converts that string value into a number before checking if that is not a number and returns the appropriate boolean value.</li>
-            </ol>  
-            Thus, when the user leaves nothing in the input area, the empty "" string value is converted to a number of 0. This number 0 is then what isNaN checks to 
-            see if it's not a number, which returns false. Thus, the message "It is actually a number." gets shown despite not having any number in that input area! 
-            To prevent this, consider having the input area converts from type "text" to type "number" instead! 
-        </p>
+        <div class="experiment-card">
 
-    </div>
+            <h2>Experiment 4: Prevent Empty Inputs</h2>
+            
+            <label>Enter a number: </label>
+            <input type="text" id="experiment-4-number"><br><br>
+            <button class="button" onclick="showOnlyNumberInputs()">Confirm Number</button>
 
-    <div class="experiment-card">
+            <div class="response-area">
+                <h4>Here is the result of the number you just entered!</h4>
+                <p id="experiment-4-message"></p>
+            </div>
 
-        <h2>Experiment 4: Prevent Empty Inputs</h2>
-        
-        <label>Enter a number: </label>
-        <input type="text" id="experiment-4-number"><br><br>
-        <button class="button" onclick="showOnlyNumberInputs()">Confirm Number</button>
+            <div> 
+                <h3>For the following code:</h3>
+                <h4>Index.html code</h2>
+                <ul>
+                    <li>Button for Experiment 4 has onclick property that links to the showOnlyNumberInputs function in Script.js code!</li>
+                    <li>The onclick property enables to call the showOnlyNumberInputs function only after the user clicks on this particular "Confirm Number" button! </li>
+                    <li>This acheives the same result as using a addEventListener to this button in the Script.js code with the following arguments: 'click' and showOnlyNumberInputs()</li>
+                </ul>
 
-        <div class="response-area">
-            <h4>Here is the result of the number you just entered!</h4>
-            <p id="experiment-4-message"></p>
-        </div>
-
-        <div> 
-            <h3>For the following code:</h3>
-            <h4>Index.html code</h2>
-            <ul>
-                <li>Button for Experiment 4 has onclick property that links to the showOnlyNumberInputs function in Script.js code!</li>
-                <li>The onclick property enables to call the showOnlyNumberInputs function only after the user clicks on this particular "Confirm Number" button! </li>
-                <li>This acheives the same result as using a addEventListener to this button in the Script.js code with the following arguments: 'click' and showOnlyNumberInputs()</li>
-            </ul>
-
-            <h4>Script.js code</h4>
-            <pre class="code-sample">
-                <code>
+                <h4>Script.js code</h4>
+                <pre class="code-sample">
+                    <code>
     let experimentFourInput;
 
     function showOnlyNumberInputs(){
@@ -217,32 +219,32 @@
         }
         
     }
-                </code>
-            </pre>
+                    </code>
+                </pre>
+            </div>
+
         </div>
 
-    </div>
+        <div class="experiment-card">
+            <h2>Experiment 5: Using keyword required to only accept non-empty inputs for users for shopping list!</h2>
+            <form>
+                <label for="itemName">Enter the name of your desired item:</label>
+                <input type="text" id="itemName" required><br><br>
+                <button onclick="addItemToList(event)">Add This Item to the List</button>
+                <button onclick="showAllListItems(event)">Show Me All Items in the List</button>
+                <button onclick="removeItemFromList(event)">Remove This Item from the List</button>
+            </form>
 
-    <div class="experiment-card">
-        <h2>Experiment 5: Using keyword required to only accept non-empty inputs for users for shopping list!</h2>
-        <form>
-            <label for="itemName">Enter the name of your desired item:</label>
-            <input type="text" id="itemName" required><br><br>
-            <button onclick="addItemToList(event)">Add This Item to the List</button>
-            <button onclick="showAllListItems(event)">Show Me All Items in the List</button>
-            <button onclick="removeItemFromList(event)">Remove This Item from the List</button>
-        </form>
+            <div class="response-area">
+                <h4>Here is the result of the item you just entered!</h4>
+                <p id="experiment-5-message"></p>
+            </div>
 
-        <div class="response-area">
-            <h4>Here is the result of the item you just entered!</h4>
-            <p id="experiment-5-message"></p>
-        </div>
-
-        <div> 
-            <h3>For the following code:</h3>
-            <h4>Complete Code</h4>
-            <pre class="code-sample">
-                <code>
+            <div> 
+                <h3>For the following code:</h3>
+                <h4>Complete Code</h4>
+                <pre class="code-sample">
+                    <code>
     let itemList = []; 
 
     /* 
@@ -304,12 +306,12 @@
         }
     
     }
-                </code>
-            </pre>
+                    </code>
+                </pre>
 
-            <h4>For Adding an Item to the List</h4>
-            <pre class="code-sample">
-                <code>
+                <h4>For Adding an Item to the List</h4>
+                <pre class="code-sample">
+                    <code>
     function addItemToList(event){
 
         event.preventDefault();
@@ -325,13 +327,13 @@
         }
 
     }
-                </code>
-            </pre>
-            
+                    </code>
+                </pre>
+                
 
-            <h4>For Showing All Items in the List</h4>
-            <pre class="code-sample">
-                <code>
+                <h4>For Showing All Items in the List</h4>
+                <pre class="code-sample">
+                    <code>
     function showAllListItems(event){
 
         event.preventDefault();
@@ -345,12 +347,12 @@
         displayItemResult.textContent = message; 
 
     }
-                </code>
-            </pre>
+                    </code>
+                </pre>
 
-            <h4>For Removing All Items from the List</h4>
-            <pre class="code-sample">
-                <code>
+                <h4>For Removing All Items from the List</h4>
+                <pre class="code-sample">
+                    <code>
     function removeItemFromList(event){
 
         event.preventDefault();
@@ -366,13 +368,14 @@
         }
     
     }
-                </code>
-            </pre>
+                    </code>
+                </pre>
+
+            </div>
+
 
         </div>
-
-
-    </div>
+    </main>
 
     <script src="./script.js"></script>
 </body>
