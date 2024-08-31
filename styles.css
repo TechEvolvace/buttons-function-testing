@@ -3,6 +3,19 @@ body{
     color: white; 
 }
 
+/* Designed the navigation bar that includes the header */
+nav{
+    display: flex;
+    flex-direction: row; 
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+/* Designed the header */
+header{
+    font-size: 1.1rem;
+}
+
 /* Design for card that encompases an experiment for this testing ground */
 .experiment-card{
     background-color: #FAD0AD; 
@@ -19,33 +32,6 @@ body{
     box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2); 
 }
 
-/* Design the area that contains the code snippet */
-.code-sample{
-    background-color:midnightblue;
-    color: #FFFF33;
-}
-
-/* Design the buttons */ 
-.button{
-    display: flex;
-    background-color:rgb(43, 167, 43);
-    justify-content: center;
-    color: white;
-    font-size: 16pt;
-    width: 8%;
-    height: 8%;
-    border-radius: 20px;
-}
-
-/* Design the Experiment 2's message results area */
-#experiment-2-message{
-    display: flex; 
-    width: 25%;
-    height: 12%;
-    flex-wrap: wrap;
-    padding: 10px 10px;
-}
-
 /* Design message area for an experiment, primarily used by Experiment 3 */
 .message-area{
     display: flex;
@@ -60,4 +46,40 @@ body{
     height: 18% auto; 
     padding: 10px 10px; 
     background-color: radial-gradient(#7FFFDD, #B3BEFF);
+}
+
+/* Design the area that contains the code snippet */
+.code-sample{
+    background-color:midnightblue;
+    color: #FFFF33;
+    overflow-x: auto; /* Adds a horizontal scrollbar to see all the code by scrolling horizontally!*/
+}
+
+/* Design the display of the code text */
+code{
+    display: flex;
+    flex-wrap: wrap;
+    font-family: courier, monospace;
+    padding: 1% 1%;
+}
+
+/* Design the buttons */ 
+.button{
+    display: flex;
+    background-color:rgb(43, 167, 43);
+    justify-content: center;
+    color: white;
+    font-size: 1.25em;
+    width: 25%;
+    height: 15%;
+    border-radius: 20px;
+}
+
+/* Design the Experiment 2's message results area */
+#experiment-2-message{
+    display: flex; 
+    width: 25%;
+    height: 12%;
+    flex-wrap: wrap;
+    padding: 10px 10px;
 }
