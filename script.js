@@ -155,3 +155,50 @@ function removeItemFromList(event){
     }
 
 }
+
+/* Experiment 6 */ 
+
+let favoriteGameMessage = document.createElement("p");
+    favoriteGameMessage.style.color = "rgb(25, 42, 255)"; 
+    favoriteGameMessage.style.fontSize = "25px"; 
+
+function displayFavoriteGameMessage(){
+
+    console.log("Function has been called");
+
+    console.log("The paragraph element is still created"); 
+
+    let favoriteGame = document.querySelector("#favoriteGame").value; 
+    let favoriteGameMessageArea = document.getElementById("favorite-game-message");
+
+    console.log(`We got the input. It's now ${favoriteGame}`); 
+
+    console.log(favoriteGameMessageArea.hasChildNodes());
+    console.log(favoriteGameMessageArea.contains(favoriteGameMessage));
+    console.log(favoriteGameMessageArea.childNodes.length);
+
+    if(favoriteGameMessageArea.childNodes.length < 2){
+        favoriteGameMessageArea.appendChild(favoriteGameMessage);
+        favoriteGameMessage.textContent = `Your favorite game is currently ${favoriteGame}`; 
+
+        console.log("Successfully appended the paragraph element that contains the text of the message to the message area!");
+    } else {
+        favoriteGameMessage.textContent = `Your favorite game is currently ${favoriteGame}`; 
+
+        console.log("Successfully modified the text content of the child node to the most recent favorite game entered by the user!");
+    }
+
+}
+
+/* Prevents the default refresh of the page whenever the user enters an input. */
+document.getElementById("experiment-6-form").addEventListener("submit", (event) => {
+    event.preventDefault();
+});
+
+/* Dive into deeper on how the DOM keeps track of the length of the list of child nodes for the message area element! */
+function determineChildNodeLength(){
+    let childNodeLengthMessage = document.querySelector("#child-node-length-of-experiment-6-message-area");
+    childNodeLengthMessage.style.visibility = "visible";
+    childNodeLengthMessage.textContent = `Child Node length for Experiment 6's message area element: ${document.getElementById("favorite-game-message").childNodes.length}`;
+}
+
