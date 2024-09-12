@@ -155,3 +155,37 @@ function removeItemFromList(event){
     }
 
 }
+
+/* Experiment 6 */ 
+function displayFavoriteGameMessage(){
+
+    console.log("Function has been called");
+
+    let favoriteGameMessage = document.createElement("p");
+    favoriteGameMessage.style.color = "rgb(25, 42, 255)"; 
+    favoriteGameMessage.style.fontSize = "25px"; 
+
+    console.log("The paragraph element is still created"); 
+
+    let favoriteGame = document.querySelector("#favoriteGame").value; 
+    let favoriteGameMessageArea = document.getElementById("favorite-game-message");
+
+    console.log(`We got the input. It's now ${favoriteGame}`); 
+
+    if(favoriteGameMessageArea.contains(favoriteGameMessage)){
+        favoriteGameMessage.textContent = `Your favorite game is currently ${favoriteGame}`;
+
+        console.log("Successfully changed the message without appending more elements.");
+
+    } else {
+        document.getElementById("favorite-game-message").append(favoriteGameMessage);
+        favoriteGameMessage.textContent = `Your favorite game is currently ${favoriteGame}`; 
+
+        console.log("Successfully appended the paragraph element that contains the text of the message to the message area!");
+    }
+
+}
+
+document.getElementById("experiment-6-form").addEventListener("submit", (event) => {
+    event.preventDefault();
+});

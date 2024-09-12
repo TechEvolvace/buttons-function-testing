@@ -384,10 +384,12 @@
 
         <div class="experiment-card">
             <h2>Experiment 6: Reactive Message Response For Any Changes to the Input</h2>
-            <form>
+            <form id="experiment-6-form">
                 <label for="favoriteGame">What is your favorite game?</label>
-                <input type="text" id="favoriteGame" required><br><br>
-                
+                <input type="text" id="favoriteGame" required onchange="displayFavoriteGameMessage()"><br><br>
+                <section id="favorite-game-message">
+                    
+                </section>
             </form>
 
         </div>
