@@ -159,8 +159,13 @@ function removeItemFromList(event){
 /* Experiment 6 */ 
 
 let favoriteGameMessage = document.createElement("p");
-    favoriteGameMessage.style.color = "rgb(25, 42, 255)"; 
+    favoriteGameMessage.style.backgroundColor = "#00076f";
+    favoriteGameMessage.style.color = "#12f7ff"; 
     favoriteGameMessage.style.fontSize = "25px"; 
+    favoriteGameMessage.style.border = "2px solid #12f7ff";
+    favoriteGameMessage.style.borderRadius = "20px";
+    favoriteGameMessage.style.padding = "1rem";
+    favoriteGameMessage.style.transform = "translate(0px, -10px)";
 
 function displayFavoriteGameMessage(){
 

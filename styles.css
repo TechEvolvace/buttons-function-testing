@@ -93,10 +93,9 @@ code{
 .test-results{
     font-size: 24px; 
     background-color: rgb(67, 251, 150);
-    width: 80%;
     height: 30%; 
     color: #b31b21;
-    padding: 20px;
-    border-radius: 10px;
+    padding: 1rem;
+    border-radius: 20px;
     visibility: hidden;
 }
