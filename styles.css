@@ -99,3 +99,20 @@ code{
     border-radius: 20px;
     visibility: hidden;
 }
+
+.findings-report{
+    box-sizing: border-box;
+    background-color: #242acf;
+    color: white; 
+    width: 100%;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+}
+
+.findings-text code.code-piece{
+    color:rgb(67, 251, 150); 
+}
+
+.findings-text code.code-example{
+    color: #ff9b79;
+}
