@@ -395,6 +395,67 @@
                 <h3 class="test-results" id="child-node-length-of-experiment-6-message-area"></h3>
             </form>
 
+            <section class="findings-report">
+                <h3>Results Finding!</h3>
+                <main class="findings-text">
+                    <h4>About JavaScript's Handling of Child Nodes</h4>
+                    <ul>
+                        <li><p>
+                            Appending an element as a child node under another element will 
+                            display that element as a separate element.
+                        </p></li>
+                        <li><p>
+                            Without conditional statements to check if there is that child element 
+                            you want to append under another element, then for each time the function that gets 
+                            called that involves appending that child element, one child element will 
+                            get appended each time. The final result is of many of the same child elements 
+                            popping up on the website, which is mostly likely not your intended result!
+                        </p></li>
+                        <li>
+                            <p>For the following references to the conditional statement: 
+                                <p>[parent element] : the element to append the new element onto</p>
+                                <p>[new element] : the new element that was created and you wanted that element to append onto the parent element 
+                                    to get it displayed correctly in the website
+                                </p>
+                            </p>
+                        </li>
+                        <li>
+                            <p>To target and get a specfic element: 
+                            <ul>
+                                <p>Use <code class="code-piece">document.getElementbyId("name of element with a specific id value")</code> to get a specific element that has that specific id value!</p>
+                                <p>Use <code class="code-piece">document.querySelector("[tag class] name of element's specific value from that tag class")</code>
+                                    <p>Specific tag class:
+                                        <ul>
+                                            <p>. = targeting an element with a specific class name</p>
+                                            <p># = targeting an element with a specific id value</p>
+                                            <p>* = universal selector that will target every element</p>
+                                            <p>By default, no tag class will specify a specific tag element (such as body, p, ...)</p>
+                                        <ul>
+                                    </p>
+                                    <p>Examples:
+                                        <ul>
+                                            <li><p>Getting a specific tag element: </p>
+                                            <code class="code-example">document.querySelector("main")</code><br>
+                                            </li>
+
+                                            <li>
+                                            <p>Getting an element with the specific class name:</p>
+                                            <code class="code-example">document.querySelector(".button-design")</code><br>
+                                            </li>
+
+                                            <li>
+                                            <p>Getting an element with the specific id value:</p>
+                                            <code class="code-example">document.querySelector("#main-button")</code><br>
+                                            </li>
+                                        </ul>
+                                    </p>
+                                </p>
+                            </ul>
+                            </p>
+                        </li>
+                    </ul>
+                </main>
+            </section>
         </div>
     </main>
 
