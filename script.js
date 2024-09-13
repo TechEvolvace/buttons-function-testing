@@ -157,7 +157,12 @@ function removeItemFromList(event){
 }
 
 /* Experiment 6 */ 
-
+/*
+    The paragraph element to contain a message about 
+    the user's current favorite game, and is supposed to be 
+    appended to the document as the child node to the section
+    element with id "favorite-game-message".
+*/
 let favoriteGameMessage = document.createElement("p");
     favoriteGameMessage.style.backgroundColor = "#00076f";
     favoriteGameMessage.style.color = "#12f7ff"; 
@@ -165,32 +170,37 @@ let favoriteGameMessage = document.createElement("p");
     favoriteGameMessage.style.border = "2px solid #12f7ff";
     favoriteGameMessage.style.borderRadius = "20px";
     favoriteGameMessage.style.padding = "1rem";
-    favoriteGameMessage.style.transform = "translate(0px, -10px)";
+    favoriteGameMessage.style.transform = "translate(0px, -10px)"; 
 
+/*
+    This function displays a message about the user's current 
+    favorite game, which was asked and collected from the user 
+    as input. 
+*/
 function displayFavoriteGameMessage(){
 
-    console.log("Function has been called");
-
-    console.log("The paragraph element is still created"); 
-
+    // Important variable for this function
+    let message; 
     let favoriteGame = document.querySelector("#favoriteGame").value; 
     let favoriteGameMessageArea = document.getElementById("favorite-game-message");
 
-    console.log(`We got the input. It's now ${favoriteGame}`); 
-
-    console.log(favoriteGameMessageArea.hasChildNodes());
-    console.log(favoriteGameMessageArea.contains(favoriteGameMessage));
-    console.log(favoriteGameMessageArea.childNodes.length);
-
-    if(favoriteGameMessageArea.childNodes.length < 2){
-        favoriteGameMessageArea.appendChild(favoriteGameMessage);
-        favoriteGameMessage.textContent = `Your favorite game is currently ${favoriteGame}`; 
-
-        console.log("Successfully appended the paragraph element that contains the text of the message to the message area!");
+    /* Determine what kind of message the display message will be */
+    if(favoriteGame === "" || favoriteGame === null){
+        message = `You haven't entered the name of your favorite game yet.`;
     } else {
-        favoriteGameMessage.textContent = `Your favorite game is currently ${favoriteGame}`; 
+        message = `Your favorite game is now ${favoriteGame}`;
+    }
 
-        console.log("Successfully modified the text content of the child node to the most recent favorite game entered by the user!");
+    // Update the display message to display 
+    favoriteGameMessage.textContent = message;
+
+    /* 
+        Handle the append or modification to the message area child element 
+        to contain the message about the user's current favorite game at the moment. 
+    */
+    if(!favoriteGameMessageArea.contains(favoriteGameMessage)){
+        favoriteGameMessageArea.appendChild(favoriteGameMessage);
+        console.log("Successfully appended the paragraph element that contains the text of the message to the message area!");
     }
 
 }
@@ -206,4 +216,3 @@ function determineChildNodeLength(){
     childNodeLengthMessage.style.visibility = "visible";
     childNodeLengthMessage.textContent = `Child Node length for Experiment 6's message area element: ${document.getElementById("favorite-game-message").childNodes.length}`;
 }
-
