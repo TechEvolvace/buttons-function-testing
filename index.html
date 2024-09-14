@@ -396,10 +396,10 @@
             </form>
 
             <section class="findings-report">
-                <h3>Results Finding!</h3>
+                <h2>Results Finding!</h2>
                 <main class="findings-text">
 
-                    <h4>How to Target a Specific Element in JavaScript:</h4>
+                    <h3>How to Target a Specific Element in JavaScript:</h3>
                     <p>There are 2 different ways to target and get a specific element: 
                         <ol>
                             <li>
@@ -438,7 +438,7 @@
                         </ol>
                     </p>
 
-                    <h4>About JavaScript's Handling of Child Nodes</h4>
+                    <h3>About JavaScript's Handling of Child Nodes</h3>
                     <ul>
                         <li><p>
                             Appending an element as a child node under another element will 
@@ -468,6 +468,27 @@
                                     the element you want to append a specfic element to and the specific element to append, respectively.
                                 </p>
                             </p>
+                        </li>
+
+                        <li>
+                            <h4 style="font-weight:700">
+                                How to Use the Conditional Statement to Determine whether to either append a new element or not?
+                            </h4>
+                            <ul>
+                                <li>
+                                    <p>
+                                        When the element is not initially shown on the website and needs to be appended to a specific element in the Document Object Model,
+                                        you need to first check if the conditional statemnt <code class="code-piece">[parent element].contains([new element])</code> 
+                                        is false before appending that new element. 
+                                    </p>
+                                </li>
+                                <li>
+                                    <p>
+                                        When there's already an element initially shown on the website, it's already appended in the Document Object Model. 
+                                        If you need to just change the text content displayed in that element, just change the value assigned to that element's textContent property.
+                                    </p>
+                                </li>
+                            </ul>
                         </li>
                     </ul>
                 </main>
