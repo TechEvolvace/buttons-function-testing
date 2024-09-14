@@ -395,34 +395,34 @@
                 <h3 class="test-results" id="child-node-length-of-experiment-6-message-area"></h3>
             </form>
 
+            <section class="code-snippets">
+                
+                <h2>Experiment 6's code</h2>
+
+                <h3>The new paragraph element to contain the message about the user's favorite game and its design</h3>
+                <img src="./Code Snippets/Experiment 6/Experiment 6 Code Piece 1.png" class="code-snippet">
+                
+                <h3>Functions that help generate and display a message about the user's current favorite game</h3>
+                <img src="./Code Snippets/Experiment 6/Experiment 6 Code Piece 2.png" class="code-snippet">
+
+                <h3>Button to Show the Number of Child elements appended to the Section element with the id value of "favorite-game-message",
+                    where the new message will be displayed in
+                </h3>
+                <img src="./Code Snippets/Experiment 6/Experiment 6 Code Piece 3.png" class="code-snippet">
+
+            </section>
+
             <section class="findings-report">
-                <h3>Results Finding!</h3>
+                <h2>Results Finding!</h2>
                 <main class="findings-text">
-                    <h4>About JavaScript's Handling of Child Nodes</h4>
-                    <ul>
-                        <li><p>
-                            Appending an element as a child node under another element will 
-                            display that element as a separate element.
-                        </p></li>
-                        <li><p>
-                            Without conditional statements to check if there is that child element 
-                            you want to append under another element, then for each time the function that gets 
-                            called that involves appending that child element, one child element will 
-                            get appended each time. The final result is of many of the same child elements 
-                            popping up on the website, which is mostly likely not your intended result!
-                        </p></li>
-                        <li>
-                            <p>For the following references to the conditional statement: 
-                                <p>[parent element] : the element to append the new element onto</p>
-                                <p>[new element] : the new element that was created and you wanted that element to append onto the parent element 
-                                    to get it displayed correctly in the website
-                                </p>
-                            </p>
-                        </li>
-                        <li>
-                            <p>To target and get a specfic element: 
-                            <ul>
+                    <h3>How to Target a Specific Element in JavaScript:</h3>
+                    <p>There are 2 different ways to target and get a specific element: 
+                        <ol>
+                            <li>
                                 <p>Use <code class="code-piece">document.getElementbyId("name of element with a specific id value")</code> to get a specific element that has that specific id value!</p>
+                            </li>
+
+                            <li>
                                 <p>Use <code class="code-piece">document.querySelector("[tag class] name of element's specific value from that tag class")</code>
                                     <p>Specific tag class:
                                         <ul>
@@ -450,8 +450,61 @@
                                         </ul>
                                     </p>
                                 </p>
-                            </ul>
+                            </li>
+                        </ol>
+                    </p>
+
+                    <h3>About JavaScript's Handling of Child Nodes</h3>
+                    <ul>
+                        <li><p>
+                            Appending an element as a child node under another element will 
+                            display that element as a separate element.
+                        </p></li>
+                        <li><p>
+                            Without conditional statements to check if there is that child element 
+                            you want to append under another element, then for each time the function that gets 
+                            called that involves appending that child element, one child element will 
+                            get appended each time. The final result is of many of the same child elements 
+                            popping up on the website, which is mostly likely not your intended result!
+                        </p></li>
+                        <li>
+                            <p>For the following references to the conditional statement: 
+                                <p>[parent element] : the element to append the new element onto</p>
+                                <p>[new element] : the new element that was created and you wanted that element to append onto the parent element 
+                                    to get it displayed correctly in the website
+                                </p>
                             </p>
+                        </li>
+
+                        <li>
+                            <p>
+                                The conditional statement to use to check if the parent element has a specific element as its appended child element is:
+                                <code class="code-piece">[parent element].contains([new element])</code>
+                                <p class="legend-info">Ignore the brackets in the code above because [parent element] and [new element] are how I referenced
+                                    the element you want to append a specfic element to and the specific element to append, respectively.
+                                </p>
+                            </p>
+                        </li>
+
+                        <li>
+                            <h4 style="font-weight:700">
+                                How to Use the Conditional Statement to Determine whether to either append a new element or not?
+                            </h4>
+                            <ul>
+                                <li>
+                                    <p>
+                                        When the element is not initially shown on the website and needs to be appended to a specific element in the Document Object Model,
+                                        you need to first check if the conditional statemnt <code class="code-piece">[parent element].contains([new element])</code> 
+                                        is false before appending that new element. 
+                                    </p>
+                                </li>
+                                <li>
+                                    <p>
+                                        When there's already an element initially shown on the website, it's already appended in the Document Object Model. 
+                                        If you need to just change the text content displayed in that element, just change the value assigned to that element's textContent property.
+                                    </p>
+                                </li>
+                            </ul>
                         </li>
                     </ul>
                 </main>

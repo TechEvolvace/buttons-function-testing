@@ -111,8 +111,38 @@ code{
 
 .findings-text code.code-piece{
     color:rgb(67, 251, 150); 
+    border: 1px solid rgb(67, 251, 150);
+    padding: 10px; 
+    border-radius: 10px;
 }
 
 .findings-text code.code-example{
-    color: #ff9b79;
+    color: #d9f451;
+    border: 1px solid #d9f451;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 0px;
+}
+
+.findings-text .legend-info{
+    color: #ff794c;
+    font-weight: 600;
+}
+
+.experiment-card section{
+    margin: 20px 0px;
+}
+
+section.code-snippets{
+    box-sizing: border-box;
+    width: 100%;
+    padding: 10px 10px;
+    background-color: #00076f;
+    color: white;
+    border-radius: 10px;
+}
+
+.code-snippets img.code-snippet{
+    width: 100%;
+    height: 50%;
 }
