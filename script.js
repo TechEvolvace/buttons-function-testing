@@ -1,8 +1,6 @@
-let numberEntered;
-
 /* This function is used in Experiment 1 */
 document.getElementById("submit-button").onclick = function(){
-    numberEntered = document.getElementById("number-input").value;
+    let numberEntered = document.getElementById("number-input").value;
     console.log("You entered " + numberEntered + ".");
     document.getElementById("display-input").textContent = "You entered " + numberEntered + "!"; 
 }
