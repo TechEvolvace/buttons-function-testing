@@ -5,13 +5,10 @@ document.getElementById("submit-button").onclick = function(){
     document.getElementById("display-input").textContent = "You entered " + numberEntered + "!"; 
 }
 
-let minNumberEntered;
-let maxNumberEntered;
-
-/* This function is used in Experiment 2 */
+// This function is used in Experiment 2
 function processMaxAndMinInputs(){
-    minNumberEntered = Number.parseInt(document.getElementById("min-number-input").value);
-    maxNumberEntered = Number.parseInt(document.getElementById("max-number-input").value);
+    let minNumberEntered = Number.parseInt(document.getElementById("min-number-input").value);
+    let maxNumberEntered = Number.parseInt(document.getElementById("max-number-input").value);
     let printResultArea = document.getElementById("experiment-2-message");
     printResultArea.style.backgroundColor = "whitesmoke";
     printResultArea.style.color = "red";
@@ -39,10 +36,12 @@ function processMaxAndMinInputs(){
     printResultArea.setAttribute(messageColor);
 }
 
+// Helper function for function used in Experiment 2
 function maxGreaterThanMin(min, max){
     return max > min; 
 }
 
+// Adding the event listener to Experiment 2's submit button
 document.getElementById("experiment-2-submit-button").addEventListener('click', processMaxAndMinInputs);
 
 /* Experiment 3 code */
@@ -69,17 +68,16 @@ function printInputType(){
 
 }
 
+// Added Event Listener to Experiment 3's button
 document.getElementById("experiment-3-button").addEventListener('click', printInputType);
 
 /* Experiment 4 */
-let experimentFourInput;
-
-/* Function used in Experiment 4 */
+// Function used in Experiment 4
 function showOnlyNumberInputs(){
 
     console.log("Button successfully clicked, and this is now starting to process the input!");
     let displayExperimentFourMessage = document.getElementById("experiment-4-message"); 
-    experimentFourInput = document.getElementById("experiment-4-number").value;
+    let experimentFourInput = document.getElementById("experiment-4-number").value;
     
     if(experimentFourInput === "" || experimentFourInput === null){
         displayExperimentFourMessage.textContent = `You haven't input any numbers yet. Please enter a number.`; 
@@ -133,9 +131,9 @@ function showAllListItems(event){
 }
 
 /*
-    When the remove button is clicked, this will check whether it's possible to remove
-    the item from the list based on the name of the item the user entered before 
-    removing the item from the list. This also displays an appropriate message 
+    When the remove button is clicked, this will check whether it's possible to 
+    remove the item from the list based on the name of the item the user entered 
+    before removing the item from the list. This also displays an appropriate message 
     based on what kind of item is specified to be removed from the list! 
 */
 function removeItemFromList(event){
