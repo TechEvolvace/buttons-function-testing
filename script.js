@@ -135,9 +135,9 @@ function showAllListItems(event){
 }
 
 /*
-    When the remove button is clicked, this will check whether it's possible to remove
-    the item from the list based on the name of the item the user entered before 
-    removing the item from the list. This also displays an appropriate message 
+    When the remove button is clicked, this will check whether it's possible to 
+    remove the item from the list based on the name of the item the user entered 
+    before removing the item from the list. This also displays an appropriate message 
     based on what kind of item is specified to be removed from the list! 
 */
 function removeItemFromList(event){
