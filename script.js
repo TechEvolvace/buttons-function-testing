@@ -74,14 +74,12 @@ function printInputType(){
 document.getElementById("experiment-3-button").addEventListener('click', printInputType);
 
 /* Experiment 4 */
-let experimentFourInput;
-
-/* Function used in Experiment 4 */
+// Function used in Experiment 4
 function showOnlyNumberInputs(){
 
     console.log("Button successfully clicked, and this is now starting to process the input!");
     let displayExperimentFourMessage = document.getElementById("experiment-4-message"); 
-    experimentFourInput = document.getElementById("experiment-4-number").value;
+    let experimentFourInput = document.getElementById("experiment-4-number").value;
     
     if(experimentFourInput === "" || experimentFourInput === null){
         displayExperimentFourMessage.textContent = `You haven't input any numbers yet. Please enter a number.`; 
