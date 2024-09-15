@@ -7,13 +7,10 @@ document.getElementById("submit-button").onclick = function(){
     document.getElementById("display-input").textContent = "You entered " + numberEntered + "!"; 
 }
 
-let minNumberEntered;
-let maxNumberEntered;
-
-/* This function is used in Experiment 2 */
+// This function is used in Experiment 2
 function processMaxAndMinInputs(){
-    minNumberEntered = Number.parseInt(document.getElementById("min-number-input").value);
-    maxNumberEntered = Number.parseInt(document.getElementById("max-number-input").value);
+    let minNumberEntered = Number.parseInt(document.getElementById("min-number-input").value);
+    let maxNumberEntered = Number.parseInt(document.getElementById("max-number-input").value);
     let printResultArea = document.getElementById("experiment-2-message");
     printResultArea.style.backgroundColor = "whitesmoke";
     printResultArea.style.color = "red";
@@ -41,10 +38,12 @@ function processMaxAndMinInputs(){
     printResultArea.setAttribute(messageColor);
 }
 
+// Helper function for function used in Experiment 2
 function maxGreaterThanMin(min, max){
     return max > min; 
 }
 
+// Adding the event listener to Experiment 2's submit button
 document.getElementById("experiment-2-submit-button").addEventListener('click', processMaxAndMinInputs);
 
 /* Experiment 3 code */
