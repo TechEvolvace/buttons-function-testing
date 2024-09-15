@@ -71,6 +71,7 @@ function printInputType(){
 
 }
 
+// Added Event Listener to Experiment 3's button
 document.getElementById("experiment-3-button").addEventListener('click', printInputType);
 
 /* Experiment 4 */
