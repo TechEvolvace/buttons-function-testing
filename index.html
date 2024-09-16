@@ -200,8 +200,11 @@
             </section>
         </div>
 
+        <!-- Experiment 5: Getting User Input in Adding or Removing an Item From the List by the item's specific name -->
         <div class="experiment-card">
             <h2>Experiment 5: Using keyword required to only accept non-empty inputs for users for shopping list!</h2>
+
+            <!-- Section where the user enters the inputs and the buttons to perform their respective actions in Experiment 5 -->
             <form>
                 <label for="itemName">Enter the name of your desired item:</label>
                 <input type="text" id="itemName" required><br><br>
@@ -210,13 +213,15 @@
                 <button onclick="removeItemFromList(event)">Remove This Item from the List</button>
             </form>
 
+            <!-- Section to display a message about the specific user input most recently performed in Experiment 5 -->
             <aside class="response-section">
                     <h4>Here is the result of the item you just entered!</h4>
                     <p id="experiment-5-message"></p>
             </aside>
 
-            <section class="code-snippet">
-                <h2>Experiment 5 Code</h2>
+            <!-- Section to display all the code used for Experiment 5 -->
+            <section class="code-snippets">
+                <h2>Experiment 5's Code</h2>
 
                 <h3>Complete JavaScript Code</h3>
                 <img src="./Code Snippets/Experiment 5/Experiment 5 Code Snippet - Complete JavaScript Code.png" class="code-snippet">
@@ -229,7 +234,33 @@
 
                 <h3>For Deleting a Specific Item from the List</h3>
                 <img src="./Code Snippets/Experiment 5/Experiment 5 Code Snippet - Remove Item From List.png" class="code-snippet">
-            </section>    
+            </section> 
+            
+            <!-- Section to display my findings from Experiment 5 -->
+            <section class="findings-report">
+                <h2>Results Findings!</h2>
+                <main class="findings-text">
+                    <ul>
+                        <li><p>Using the form element allows implementing essential components needed to prompt the user and get the inputs
+                            with a more cleaner and organized HTML code! 
+                        </p></li>
+                        <li>
+                            <p>When implementing the form element, you need to include the <code class="code-piece">event</code>
+                            as a parameter for any Javascript function that will be called by the element's onclick property and an argument 
+                            for the called function such as
+                            </p>
+                            <ul>
+                                <h3>JavaScript function that gets called as a result of a click</h3>
+                                <code class="code-example">function somefunction(<code class="code-piece">event</code>){ console.log("Input received") }"</code>
+                                <br><br>
+                                <h3>HTML button with onclick property and the called JavaScript function with an event as the argument</h3>
+                                <code class="code-example">button onclick="somefunction(<code class="code-piece">event</code>)"</code>
+                                <p class="legend-info">Note that the button must be enclosed by angle bracket, and the button element must be accompanied with its closing tag counterpart in HTML!</p>
+                            </ul>
+                        </li>
+                    </ul>
+                </main>
+            </section>
         </div>
 
         <div class="experiment-card">
