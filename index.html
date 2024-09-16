@@ -66,18 +66,25 @@
                 <img src="./Code Snippets/Experiment 2/Experiment 2 Code Piece.png" class="code-snippet">
             </section>
 
-            <br> 
-            <h3>Results finding!</h3>
-            <br>
-
-            <p>User input for the input areas will always be received as a String unless it's explicitly parsed into an Integer.</p>
-            <p>After a Number.parseInt() command is used to convert the value of the input entered in a specific input area, it will be a NaN [Not a Number] 
-                only when the user doesn't enter anything in the input area or when the user enters a non-number input! We can take advantage of this by checking 
-                if that input is a number through isNaN() command and display an appropriate message of the user hasn't enter anything for that input area!
-            </p>
-            <p> In the end, this was able to display the correct message and change the message color to an appropriate one based on the two number the user entered
-                for this experiment! 
-            </p>
+            <section class="findings-report">
+                <h2>Results Finding!</h2>
+                <main class="findings-text">
+                    <ol>
+                        <li><p>User input for the input areas will always be received as a String unless it's explicitly parsed into an Integer.</p></li>
+                        <li>
+                            <p>After a Number.parseInt() command is used to convert the value of the input entered in a specific input area, it will be a NaN [Not a Number] 
+                                only when the user doesn't enter anything in the input area or when the user enters a non-number input! We can take advantage of this by checking 
+                                if that input is a number through isNaN() command and display an appropriate message of the user hasn't enter anything for that input area!
+                            </p>
+                        </li>
+                        <li>
+                            <p> In the end, this was able to display the correct message and change the message color to an appropriate one based on the two number the user entered
+                                for this experiment! 
+                            </p>
+                        </li>
+                    </ol>
+                </main>
+            </section>
         </div>
 
         <!-- Experiment 3: Identified type of input and display the input's type -->
@@ -104,19 +111,25 @@
                 <img src="./Code Snippets/Experiment 3/Experiment 3 Code Piece.png" class="code-snippet">
             </section>
 
-            <br> 
-            <h3>Results finding!</h3>
-            <p>
-                When Input Area is left empty, apparently it displays that it is actually a number, instead of the expected "It is actually not a number". 
-                <br>
-                <ol>
-                    <li>When a user enters an input into the input area, the .value command receives the value inside that input area as a string.</li>
-                    <li>The isNaN command first converts that string value into a number before checking if that is not a number and returns the appropriate boolean value.</li>
-                </ol>  
-                Thus, when the user leaves nothing in the input area, the empty "" string value is converted to a number of 0. This number 0 is then what isNaN checks to 
-                see if it's not a number, which returns false. Thus, the message "It is actually a number." gets shown despite not having any number in that input area! 
-                To prevent this, consider having the input area converts from type "text" to type "number" instead! 
-            </p>
+            <section class="findings-report">
+                <h2>Results Findings!</h2>
+                <main class="findings-text">
+                    <h3>Unexpected Result</h3>
+                    <ul>
+                        <li><p>When Input Area is left empty, apparently it displays that it is actually a number, instead of the expected "It is actually not a number".</p></li>
+                    </ul>
+                    <h3>How the User Input Processing Lead to this unexpected result?</h3>
+                    <ol>
+                        <li><p>When a user enters an input into the input area, the .value command receives the value inside that input area as a string.</p></li>
+                        <li><p>The isNaN command first converts that string value into a number before checking if that is not a number and returns the appropriate boolean value.</p></li>
+                        <li><p>When the user leaves nothing in the input area, the empty "" string value is converted to a number of 0.</p></li>
+                        <li><p>This number 0 is then what isNaN checks to see if it's not a number, which returns false.</p></li>
+                        <li><p>Thus, the message "It is actually a number." gets shown despite not having any number in that input area!</p></li>
+                    </ol>
+                    <h3>How to Account for Edge case of User Leaving Behind an Empty Input</h3>
+                    <p>To prevent this, consider having the input area converts from type "text" to type "number" instead!</p>
+                </main>
+            </section>  
         </div>
 
         <div class="experiment-card">
