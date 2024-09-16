@@ -34,23 +34,26 @@
     --cetacean-blue: #001440;
 }
 
-
+/*
+    Make sure the header and all experiment cards are aligned vertically in a column! 
+    Really useful organization of elements even when screen width is small! 
+*/
 body{
+    display: flex; 
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     background-color: var(--galaxy-dark-blue); 
     color: white; 
-}
-
-/* Designed the navigation bar that includes the header */
-nav{
-    display: flex;
-    flex-direction: row; 
-    justify-content: space-evenly;
-    align-items: center;
+    margin: 0;
+    padding: 0;
 }
 
 /* Designed the header */
 header{
     font-size: 1.1rem;
+    text-align: center;
+    margin: 0.1rem 0.5rem;
 }
 
 /* Design for card that encompases an experiment for this testing ground */
