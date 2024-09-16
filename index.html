@@ -98,19 +98,20 @@
                     </ol>
                 </main>
             </section>
-  
         </div>
 
         <!-- Experiment 3: Identified type of input and display the input's type -->
         <div class="experiment-card">
             <h2> Experiment 3: Display Data Type of Number Input Entered</h2><br>
 
+            <!-- Section where the user enters the input for Experiment 3 -->
             <label>Enter a number: </label>
             <input type="text" id="experiment-3-number"><br><br>
             <div class="button" id="experiment-3-button">
                 <p>Confirm</p>
             </div>
 
+            <!-- Section where the message about the type (whether it's a number or not) of inputs entered for Experiment 3 is shown -->
             <aside class="response-section">
                 <h3>Here is the result of the minimum and maximum number you entered!</h3>
                 <div class="message-area" id="experiment-3-message">
@@ -118,6 +119,7 @@
                 </div>
             </aside>
 
+            <!-- Section to display the code used for Experiment 3 -->
             <section class="code-snippets">
                 <h2>Experiment 3's Code</h2>
 
@@ -125,19 +127,26 @@
                 <img src="./Code Snippets/Experiment 3/Experiment 3 Code Piece.png" class="code-snippet">
             </section>
 
-            <br> 
-            <h3>Results finding!</h3>
-            <p>
-                When Input Area is left empty, apparently it displays that it is actually a number, instead of the expected "It is actually not a number". 
-                <br>
-                <ol>
-                    <li>When a user enters an input into the input area, the .value command receives the value inside that input area as a string.</li>
-                    <li>The isNaN command first converts that string value into a number before checking if that is not a number and returns the appropriate boolean value.</li>
-                </ol>  
-                Thus, when the user leaves nothing in the input area, the empty "" string value is converted to a number of 0. This number 0 is then what isNaN checks to 
-                see if it's not a number, which returns false. Thus, the message "It is actually a number." gets shown despite not having any number in that input area! 
-                To prevent this, consider having the input area converts from type "text" to type "number" instead! 
-            </p>
+            <!-- Section to display my findings from Experiment 3 -->
+            <section class="findings-report">
+                <h2>Results Findings!</h2>
+                <main class="findings-text">
+                    <h3>Unexpected Result</h3>
+                    <ul>
+                        <li><p>When Input Area is left empty, apparently it displays that it is actually a number, instead of the expected "It is actually not a number".</p></li>
+                    </ul>
+                    <h3>How the User Input Processing Lead to this unexpected result?</h3>
+                    <ol>
+                        <li><p>When a user enters an input into the input area, the .value command receives the value inside that input area as a string.</p></li>
+                        <li><p>The isNaN command first converts that string value into a number before checking if that is not a number and returns the appropriate boolean value.</p></li>
+                        <li><p>When the user leaves nothing in the input area, the empty "" string value is converted to a number of 0.</p></li>
+                        <li><p>This number 0 is then what isNaN checks to see if it's not a number, which returns false.</p></li>
+                        <li><p>Thus, the message "It is actually a number." gets shown despite not having any number in that input area!</p></li>
+                    </ol>
+                    <h3>How to Account for Edge case of User Leaving Behind an Empty Input</h3>
+                    <p>To prevent this, consider having the input area converts from type "text" to type "number" instead!</p>
+                </main>
+            </section>  
         </div>
 
         <div class="experiment-card">
