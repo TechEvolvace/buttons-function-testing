@@ -48,10 +48,12 @@
 
         </div>
 
-        <!-- Experiment 2: Display -->
+        <!-- Experiment 2: Display a message about the validity of the maximum and minimum number the user entered -->
         <div class="experiment-card">
             <h2> Experiment 2: With Maximum and Minimum Number Inputs</h2>
             <br>
+
+            <!-- Section where the user enters the 2 inputs needed in Experiment 2 -->
             <label>Enter a minimum number: </label>
             <input type="number" id="min-number-input"><br><br>
             <label>Enter a maximum number: </label>
@@ -60,11 +62,13 @@
                 <p>Submit</p>
             </div>
 
+            <!-- Section where the message about the validity of the maximum and minimum number the user entered for Experiment 2 is shown-->
             <aside class="response-section">
                 <h3>Here is the result of the minimum and maximum number you entered!</h3>
                 <p id="experiment-2-message"></p>
             </aside>
 
+            <!-- Section to display the code used for Experiment 2 -->
             <section class="code-snippets">
                 <h2>Experiment 2's Code</h2>
                 
@@ -74,18 +78,27 @@
                 <img src="./Code Snippets/Experiment 2/Experiment 2 Code Piece.png" class="code-snippet">
             </section>
 
-            <br> 
-            <h3>Results finding!</h3>
-            <br>
-
-            <p>User input for the input areas will always be received as a String unless it's explicitly parsed into an Integer.</p>
-            <p>After a Number.parseInt() command is used to convert the value of the input entered in a specific input area, it will be a NaN [Not a Number] 
-                only when the user doesn't enter anything in the input area or when the user enters a non-number input! We can take advantage of this by checking 
-                if that input is a number through isNaN() command and display an appropriate message of the user hasn't enter anything for that input area!
-            </p>
-            <p> In the end, this was able to display the correct message and change the message color to an appropriate one based on the two number the user entered
-                for this experiment! 
-            </p>
+            <!-- Section to display my findings from Experiment 2 -->
+            <section class="findings-report">
+                <h2>Results Findings!</h2>
+                <main class="findings-text">
+                    <ol>
+                        <li><p>User input for the input areas will always be received as a String unless it's explicitly parsed into an Integer.</p></li>
+                        <li>
+                            <p>After a Number.parseInt() command is used to convert the value of the input entered in a specific input area, it will be a NaN [Not a Number] 
+                                only when the user doesn't enter anything in the input area or when the user enters a non-number input! We can take advantage of this by checking 
+                                if that input is a number through isNaN() command and display an appropriate message of the user hasn't enter anything for that input area!
+                            </p>
+                        </li>
+                        <li>
+                            <p> In the end, this was able to display the correct message and change the message color to an appropriate one based on the two number the user entered
+                                for this experiment! 
+                            </p>
+                        </li>
+                    </ol>
+                </main>
+            </section>
+  
         </div>
 
         <!-- Experiment 3: Identified type of input and display the input's type -->
