@@ -1,5 +1,42 @@
+/*Color schemes for this user input testing ground website */
+:root{
+    /* For website background */
+    --galaxy-dark-blue: #00076F;
+
+    /* For experiment card background and text*/
+    --vibrant-orange: #FF794C;
+    --faint-light-orange: #f4c89e;
+    --rich-black: #010b13;
+
+    /* For area to display message */
+    --light-beige-silk:rgb(249, 242, 215);
+    --galaxy-bright-blue: #242acf;
+
+    /* For code section inside experiment card */
+    --deep-space-blue: #042C62;
+
+    /* For findings result section inside experiment card*/
+    --deep-space-dark-blue: #03214A;
+    --bright-light-green: rgb(67, 251, 150);
+    --bright-light-yellow: #D9F451;
+    --sunset-orange: #fd5e53;
+
+    /* 
+        Extras to potentially use for added text differentiation or shadows 
+        for 3D depth
+    */
+    /* Additional color palettes */
+    --galaxy-faint-pink: #FFE4f2; 
+    --galaxy-bright-pink: #FFA8BD;
+    --deep-space-pitch-black: #010B19;
+    --deep-space-black: #021631;
+    --deep-space-mid-blue: #05377B;
+    --cetacean-blue: #001440;
+}
+
+
 body{
-    background-color: blue; 
+    background-color: var(--galaxy-dark-blue); 
     color: white; 
 }
 
@@ -18,8 +55,8 @@ header{
 
 /* Design for card that encompases an experiment for this testing ground */
 .experiment-card{
-    background-color: #FAD0AD; 
-    color:black; 
+    background-color: var(--vibrant-orange); 
+    color: var(--rich-black); 
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     transition: 0.3s; 
     margin: 10px; 
@@ -28,7 +65,7 @@ header{
 }
 
 .experiment-card:hover{
-    background-color: white; 
+    background-color: var(--faint-light-orange); 
     box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2); 
 }
 
@@ -38,7 +75,7 @@ header{
     flex-wrap: wrap;
     height: 16%;
     padding: 10px 10px; 
-    border: 2pt dashed blue; 
+    border: 2pt dashed var(--galaxy-bright-blue); 
 }
 
 .response-area{
@@ -70,7 +107,7 @@ header{
 }
 
 .response-section{
-    background-color: cornsilk;
+    background-color: var(--light-beige-silk);
     border-radius: 10px;
     margin: 2px;
 }
@@ -87,7 +124,7 @@ header{
 
 .findings-report{
     box-sizing: border-box;
-    background-color: #242acf;
+    background-color: var(--deep-space-dark-blue);
     color: white; 
     width: 100%;
     padding: 0.5rem 1rem;
@@ -102,7 +139,7 @@ header{
     They will only be embedded in paragraph based instructions. 
 */
 .findings-text code.code-piece{
-    color:rgb(67, 251, 150); 
+    color: var(--bright-light-green); 
     padding: 0.5%;
     font-size: 1rem;
 }
@@ -114,8 +151,8 @@ header{
     to accomplish an action or get a result. 
 */
 .findings-text code.code-example{
-    color: #d9f451;
-    border: 1px solid #d9f451;
+    color: var(--bright-light-yellow);
+    border: 1px solid var(--bright-light-yellow);
     border-radius: 10px;
     padding: 10px;
     margin: 0px;
@@ -129,7 +166,7 @@ header{
     my representation I used in my instruction, explanation, or code example.
 */
 .findings-text .legend-info{
-    color: #ff794c;
+    color: var(--sunset-orange);
     font-weight: 600;
 }
 
@@ -143,7 +180,7 @@ section.code-snippets{
     box-sizing: border-box;
     width: 100%;
     padding: 10px 10px;
-    background-color: #00076f;
+    background-color: var(--deep-space-blue);
     color: white;
     border-radius: 10px;
 }
