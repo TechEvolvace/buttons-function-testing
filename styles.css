@@ -122,6 +122,28 @@ header{
     visibility: hidden;
 }
 
+/* Gives each section some space apart from each other to increase their visibility */
+.experiment-card section{
+    margin: 20px 0px;
+}
+
+/* Area that contains code snippets for an experiment! */
+section.code-snippets{
+    box-sizing: border-box;
+    width: 100%;
+    padding: 10px 10px;
+    background-color: var(--deep-space-blue);
+    color: white;
+    border-radius: 10px;
+}
+
+/* Designing the display of the code snippet image directly! */
+.code-snippets img.code-snippet{
+    width: 100%;
+    height: 50%;
+}
+
+/* Designs the area of the findings section */
 .findings-report{
     box-sizing: border-box;
     background-color: var(--deep-space-dark-blue);
@@ -151,10 +173,11 @@ header{
     to accomplish an action or get a result. 
 */
 .findings-text code.code-example{
+    width: fit-content;
+    font-size: fit-content;
     color: var(--bright-light-yellow);
-    border: 1px solid var(--bright-light-yellow);
     border-radius: 10px;
-    padding: 10px;
+    padding: 2% 0%;
     margin: 0px;
 }
 
@@ -168,25 +191,4 @@ header{
 .findings-text .legend-info{
     color: var(--sunset-orange);
     font-weight: 600;
-}
-
-/* Gives each section some space apart from each other to increase their visibility */
-.experiment-card section{
-    margin: 20px 0px;
-}
-
-/* Area that contains code snippets for an experiment! */
-section.code-snippets{
-    box-sizing: border-box;
-    width: 100%;
-    padding: 10px 10px;
-    background-color: var(--deep-space-blue);
-    color: white;
-    border-radius: 10px;
-}
-
-/* Designing the display of the code snippet image directly! */
-.code-snippets img.code-snippet{
-    width: 100%;
-    height: 50%;
 }
