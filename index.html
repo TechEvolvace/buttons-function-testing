@@ -149,18 +149,22 @@
             </section>  
         </div>
 
+        <!-- Experiment 4: Accounting for Empty Inputs when User needs to Enter a Number Input -->
         <div class="experiment-card">
             <h2>Experiment 4: Prevent Empty Inputs</h2>
             
+            <!-- Where the user will enter the input in Experiment 4, which is a number -->
             <label>Enter a number: </label>
             <input type="text" id="experiment-4-number"><br><br>
             <button class="button" onclick="showOnlyNumberInputs()">Confirm Number</button>
 
+            <!-- Section where the message about the number the user entered for Experiment 4 -->
             <aside class="response-section">
                 <h4>Here is the result of the number you just entered!</h4>
                 <p id="experiment-4-message"></p>
             </aside>
 
+            <!-- Section to display and/or describe all the code used for Experiment 4 -->
             <section class="code-snippets">
                 <h2>Experiment 4's Code</h2>
 
@@ -173,6 +177,26 @@
 
                 <h3>Processing Input and Determining whether it's empty, not a number, or is a number, and Adding an Event Listener to Experiment 4</h3>
                 <img src="./Code Snippets/Experiment 4/Experiment 4 Code Snippet JavaScript Code.png" class="code-snippet">
+            </section>
+
+            <!-- Section to display my findings from Experiment 4 -->
+            <section class="findings-report">
+                <h2>Results Findings!</h2>
+                <main class="findings-text">
+                    <ul>
+                        <li>
+                            <p>Providing the onclick property to Experiment 4's button directly through HTML enables the same behavior for Experiment 4's button similar to 
+                                adding an event listener to Experiment 4's button that listens to a "click" interaction on the button and then calls a specific function if it does!
+                            </p>
+                        </li>
+                        <li>
+                            <p>By having additional conditional statement to check if the user's input is strictly equal to "", it can display a more appropriate message
+                                "You haven't input any numbers yet. Please enter a number." or something along the lines of "You haven't entered an input yet." whenever the user DID 
+                                enter an empty input. 
+                            </p>
+                        </li>
+                    </ul>
+                </main>
             </section>
         </div>
 
