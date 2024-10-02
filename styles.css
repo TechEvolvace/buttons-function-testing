@@ -222,13 +222,13 @@ section.code-snippets{
 
 .lightMode{
     --experiment-7-button-color: #FFA8BD;
-    --experiment-7-text: black;
+    --experiment-7-text-color: black;
     --experiment-7-background-color: #FFE4f2; 
 }
 
 .darkMode{
     --experiment-7-button-color: #5151B0;
-    --experiment-7-text: #F4AF03;
+    --experiment-7-text-color: #F4AF03;
     --experiment-7-background-color: #060660;
 }
 
@@ -237,13 +237,14 @@ section.code-snippets{
     grid-template-columns: 0.25fr repeat(3, 0.75fr) 0.25fr;
     grid-template-rows: 1fr 2fr; 
     border: 2px solid green;
-    background-color: var(--galaxy-faint-pink);
+    background-color: var(--experiment-7-background-color);
+    color: var(--experiment-7-text-color);
 }
 
 toggle-button{
     grid-column: 4 / 6;
-    background-color: var(--galaxy-bright-pink);
-    color: black;
+    background-color: var(--experiment-7-button-color);
+    color: var(--experiment-7-text-color);
     border-radius: 20px;
     margin: 5px 10px;
     padding: 5px;
