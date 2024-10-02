@@ -33,6 +33,7 @@
     --deep-space-pitch-black: #010B19;
     --deep-space-mid-blue: #05377B;
     --cetacean-blue: #001440;
+    --beautiful-green: rgb(67, 251, 150);
 }
 
 /*
@@ -204,55 +205,54 @@ section.code-snippets{
     border-radius: 20px;
 }
 
-/* 
-    Light color scheme for Experiment 7
-
-    Button color: galaxy-bright-pink
-    Background color: galaxy-faint-pink
-    Text color: black 
-*/
-
-/* 
-    Dark color scheme for Experiment 7 
-    
-    Button color: #5151B0
-    Background color: #060660
-    Text color: #F4AF03
-*/
-
+/* Experiment 7 components' light color scheme */
 .lightMode{
     --experiment-7-button-color: #FFA8BD;
     --experiment-7-text-color: black;
     --experiment-7-background-color: #FFE4f2; 
+    --experiment-7-icon-color: rgb(60, 116, 218);
 }
 
+/* Experiment 7 components' dark color scheme */
 .darkMode{
     --experiment-7-button-color: #5151B0;
-    --experiment-7-text-color: #F4AF03;
+    --experiment-7-text-color: white;
     --experiment-7-background-color: #060660;
+    --experiment-7-icon-color: rgb(9, 241, 225);
 }
 
+/* Section containing Experiment 7 components */
 .experiment-7-components{
     display: grid; 
     grid-template-columns: 0.25fr repeat(3, 0.75fr) 0.25fr;
     grid-template-rows: 1fr 2fr; 
-    border: 2px solid green;
     background-color: var(--experiment-7-background-color);
     color: var(--experiment-7-text-color);
+    padding: 0.5em 0;
+    border-radius: 20px;
 }
 
+/* Experiment 7's toggle button to switch between light and dark mode */
 toggle-button{
-    grid-column: 4 / 6;
+    grid-column: 5 / 6;
     background-color: var(--experiment-7-button-color);
-    color: var(--experiment-7-text-color);
     border-radius: 20px;
     margin: 5px 10px;
-    padding: 5px;
-    width: 10em;
-    height: 5em;
-    text-align: center;
+    padding: 0.5em;
+    width: 4em;
+    height: 2em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
+/* Experiment 7's toggle button icons */
+.experiment-7-components > toggle-button > svg{
+    /* Changes the fill color of the SVG icon */
+    fill: var(--experiment-7-icon-color);
+}
+
+/* Experiment 7's text contents */
 paragraph-text{
     grid-row: 2;
     grid-column: 2 / 5;
