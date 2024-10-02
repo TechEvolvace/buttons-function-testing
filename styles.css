@@ -23,16 +23,14 @@
 
     /* For experiment overview section*/
     --galaxy-bright-light-blue: #B5FFF6;
+    --deep-space-black: #021631;
 
     /* 
         Extras to potentially use for added text differentiation or shadows 
         for 3D depth
     */
     /* Additional color palettes */
-    --galaxy-faint-pink: #FFE4f2; 
-    --galaxy-bright-pink: #FFA8BD;
     --deep-space-pitch-black: #010B19;
-    --deep-space-black: #021631;
     --deep-space-mid-blue: #05377B;
     --cetacean-blue: #001440;
 }
@@ -206,6 +204,34 @@ section.code-snippets{
     border-radius: 20px;
 }
 
+/* 
+    Light color scheme for Experiment 7
+
+    Button color: galaxy-bright-pink
+    Background color: galaxy-faint-pink
+    Text color: black 
+*/
+
+/* 
+    Dark color scheme for Experiment 7 
+    
+    Button color: #5151B0
+    Background color: #060660
+    Text color: #F4AF03
+*/
+
+.lightMode{
+    --experiment-7-button-color: #FFA8BD;
+    --experiment-7-text: black;
+    --experiment-7-background-color: #FFE4f2; 
+}
+
+.darkMode{
+    --experiment-7-button-color: #5151B0;
+    --experiment-7-text: #F4AF03;
+    --experiment-7-background-color: #060660;
+}
+
 .experiment-7-components{
     display: grid; 
     grid-template-columns: 0.25fr repeat(3, 0.75fr) 0.25fr;
@@ -214,7 +240,7 @@ section.code-snippets{
     background-color: var(--galaxy-faint-pink);
 }
 
-toggle-button.light-dark-toggle{
+toggle-button{
     grid-column: 4 / 6;
     background-color: var(--galaxy-bright-pink);
     color: black;
