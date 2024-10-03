@@ -4,6 +4,9 @@ const colorSchemeSwitch = document.getElementById('light-dark-mode-switch');
 /* Getting a reference of the section in Experiment 7 with all the components that the light and dark mode will affect! */
 const affectedComponents = document.getElementById('experiment-7-interactable-section');
 
+/* Getting a reference of the message about the current mode in Experiment 7! */
+const currentModeMessage = document.getElementById('experiment-7-message');
+
 // Check if a mode is stored in localStorage
 let savedMode = localStorage.getItem('theme');
 
@@ -33,9 +36,11 @@ colorSchemeSwitch.addEventListener('click', () => {
     if(currentMode === 'dark'){
         setMode('light');
         localStorage.setItem('theme', 'light');
+        currentModeMessage.textContent = `Welcome to Light Mode!`;
     } else {
         setMode('dark');
         localStorage.setItem('theme', 'dark');
+        currentModeMessage.textContent = `Welcome to Dark Mode!`;
     }
 });
 
