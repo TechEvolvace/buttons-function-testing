@@ -7,17 +7,17 @@ const affectedComponents = document.getElementById('experiment-7-interactable-se
 /* Getting a reference of the message about the current mode in Experiment 7! */
 const currentModeMessage = document.getElementById('experiment-7-message');
 
-// Check if a mode is stored in localStorage
+// Check if there is a mode already saved in localStorage or not
 let savedMode = localStorage.getItem('theme');
 
-// Apply the saved mode or default to light mode 
+// Then, either applies the saved mode or default to light mode
 if(savedMode){
     setMode(savedMode);
 } else {
     setMode('light'); // Default mode is set to light mode
 }
 
-// Apply appropriate class depending on whether the mode is light mode or dark mode
+// Apply appropriate class to Experiment 7's components depending on whether the current mode is light mode or dark mode
 function setMode(mode){
     if(mode === 'dark'){
         affectedComponents.classList.add('darkMode');
@@ -28,8 +28,12 @@ function setMode(mode){
     }
 }
 
-// Toggle between light and dakr mode on a button click 
+/* 
+    Toggle between light and dark mode with a mouse click on the toggle button and apply
+    the changes on Experiment 7's components 
+*/
 colorSchemeSwitch.addEventListener('click', () => {
+    // Checks if darkMode class is currently used. If so, it's currently dark mode; otherwise, it's currently light mode! 
     let currentMode = affectedComponents.classList.contains('darkMode') ? 'dark' : 'light';
 
     // Switch to the other mode 
