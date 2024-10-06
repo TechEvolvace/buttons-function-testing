@@ -475,12 +475,36 @@
                             </ul>
                         </li>
                     </ul>
-                    <h3>Applying Specific Class Selector with Specific CSS Variables to Apply Different Color Schemes using JavaScript</h3>
+                    <h3>Applying a Specific Class Selector by Adding or Removing the specific class from a specific HTML tag using JavaScript</h3>
                     <p>Having two class selectors, each with the same CSS variables types but different CSS variable values, allows adding or removing these class selector to specific HTML tags using JavaScript's
                         <code class="code-piece">.classList.add('name-of-class-selector-to-add')</code> 
                             and 
                         <code class="code-piece">.classList.remove('name-of-class-selector-to-remove')</code>
                         respectively.
+                    </p>
+                    <ul>
+                        <li>
+                        <h4>Examples:</h4>
+                        <ul>
+                            <li>
+                                <p>Adding a specific class, lightMode, to the list of classes for the document's body HTML tag to apply the design specified by the lightMode class selector in external CSS file.</p>
+                                <code class="code-example">document.body.classList.add('lightMode');</code>
+                            </li>
+                            <li>
+                                <p>Removing a specific class, lightMode, from the list of classes for the document's body HTML tag to deactivate the design specified by the lightMode class selector in external CSS file.</p>
+                                <code class="code-example">document.body.classList.remove('lightMode');</code>
+                            </li>
+                        </ul>
+                    </ul>
+                    <p>This is <important-info class="legend-info">useful when it comes to switching the color scheme of the components for light mode and dark mode respectively</important-info> by
+                        adding one class and removing the other class to the HTML parent tag that includes all the components to apply a specific color scheme. 
+                    </p>
+                    <p>
+                        For example: 
+                        <ul>
+                            <li><p>To display the light mode color scheme for all components: add the lightMode class and remove the darkMode class from the HTML tag that encompasses all the components to apply this design switch!</p></li>
+                            <li><p>To display the dark mode color scheme for all components: add the darkMode class and remove the lightMode class the HTML tag that encompasses all the components to apply this design switch!</p></li>
+                        </ul>
                     </p>
                 </main>
             </section>
