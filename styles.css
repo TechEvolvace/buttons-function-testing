@@ -198,6 +198,7 @@ section.code-snippets{
     font-weight: 600;
 }
 
+/* Experiment overview section */
 .experiment-overview{
     background-color: var(--deep-space-black);
     color: var(--galaxy-bright-light-blue);
@@ -236,20 +237,47 @@ section.code-snippets{
 toggle-button{
     grid-column: 5 / 6;
     background-color: var(--experiment-7-button-color);
-    border-radius: 20px;
+    border-radius: 100%;
     margin: 5px 10px;
     padding: 0.5em;
-    width: 4em;
+    width: 2em;
     height: 2em;
     display: flex;
     justify-content: center;
     align-items: center;
+    cursor: pointer;
 }
 
 /* Experiment 7's toggle button icons */
 .experiment-7-components > toggle-button > svg{
     /* Changes the fill color of the SVG icon */
     fill: var(--experiment-7-icon-color);
+    width: 2em;
+    height: 2em;
+}
+
+/* 
+   In Light Mode, only shows the moon icon inside the toggle button 
+   to indicate clicking that button switches the mode to dark mode.
+*/
+.experiment-7-components.lightMode > toggle-button > svg:first-child{
+    display: none;
+}
+
+.experiment-7-components.lightMode > toggle-button > svg:last-child{
+    display: block;
+}
+
+/* 
+   In Dark Mode, only shows the sun icon inside the toggle button 
+   to indicate clicking that button switches the mode to light mode.
+*/
+.experiment-7-components.darkMode > toggle-button > svg:first-child{
+    display: block;
+}
+
+.experiment-7-components.darkMode > toggle-button > svg:last-child{
+    display: none;
 }
 
 /* Experiment 7's text contents */
