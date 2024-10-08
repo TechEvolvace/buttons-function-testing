@@ -206,20 +206,38 @@ section.code-snippets{
     border-radius: 20px;
 }
 
-/* Experiment 7 components' light color scheme */
+/* Experiment 7 and 8 components' light color scheme */
 .lightMode{
+
+    /* For Experiment 7 light mode color scheme */
     --experiment-7-button-color: #FFA8BD;
     --experiment-7-text-color: black;
     --experiment-7-background-color: #FFE4f2; 
     --experiment-7-icon-color: rgb(60, 116, 218);
+
+    /* For Experiment 8 light mode color scheme */
+    --experiment-8-button-color: #FFA8BD;
+    --experiment-8-text-color: black;
+    --experiment-8-background-color: #FFE4f2; 
+    --experiment-8-icon-color: rgb(60, 116, 218);
+
+
 }
 
-/* Experiment 7 components' dark color scheme */
+/* Experiment 7 and 8 components' dark color scheme */
 .darkMode{
+
+    /* For Experiment 7 dark mode color scheme */
     --experiment-7-button-color: #5151B0;
     --experiment-7-text-color: white;
     --experiment-7-background-color: #060660;
     --experiment-7-icon-color: rgb(9, 241, 225);
+
+    /* For Experiment 8 dark mode color scheme */
+    --experiment-8-button-color: #5151B0;
+    --experiment-8-text-color: white;
+    --experiment-8-background-color: #060660;
+    --experiment-8-icon-color: rgb(9, 241, 225);
 }
 
 /* Section containing Experiment 7 components */
@@ -288,4 +306,33 @@ paragraph-text{
     justify-content: center;
     align-items: center;
     font-size: 200%;
+}
+
+/* Experiment 8 components design */ 
+section.experiment-8-components {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--experiment-8-background-color);
+}
+
+section.experiment-8-components > header {
+    display: flex; /* Display flex property doesn't get passed to children elements */
+    flex-direction: row; /* By default, flex-direction is row */
+    justify-content: end;
+}
+
+section.experiment-8-components > header > toggle-button#toggle-switch{
+    background-color: var(--experiment-8-button-color);
+}
+
+section.experiment-8-components > header > toggle-button#toggle-switch > svg{
+    fill: var(--experiment-8-icon-color);
+    width: 2em;
+    height: 2em;
+}
+
+section.experiment-8-components > message-area{
+    display: flex;
+    justify-content: center;
+    color: var(--experiment-8-text-color);
 }
