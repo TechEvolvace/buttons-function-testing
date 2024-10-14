@@ -1,18 +1,3 @@
-/*
-
-    Notable components for Experiment 8: 
-    section container (class = "experiment-8-components", id = "experiment-8-interactable-section")
-
-    > header 
-       > toggle button (id = "toggle-switch")
-          > svg (light mode icon)
-          > svg (dark mode icon)
-
-    > message-area 
-       > paragraph-text (id = "experiment-8-message") 
-
-*/
-
 //  Getting a reference of Experiment 8's mode switch toggle button by its id value
 const colorSchemeToggleSwitch = document.getElementById("toggle-switch");
 
@@ -70,9 +55,4 @@ colorSchemeToggleSwitch.addEventListener('click', () => {
         localStorage.setItem('theme', 'dark');
         currentModeMessageArea.textContent = `Welcome to Dark Mode!`;
     }
-});
-
-const showCurrentMode = document.getElementById("show-current-mode");
-showCurrentMode.addEventListener("click", () => {
-   console.log(`Current mode: ${savedMode}`);
 });
