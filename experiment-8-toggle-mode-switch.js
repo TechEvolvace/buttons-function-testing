@@ -1,0 +1,58 @@
+//  Getting a reference of Experiment 8's mode switch toggle button by its id value
+const colorSchemeToggleSwitch = document.getElementById("toggle-switch");
+
+/* 
+    Getting a reference of the section in Experiment 8 with all the components
+    that the light dark mode will affect by its id value 
+*/
+const modifiedComponents = document.getElementById('experiment-8-interactable-section');
+
+/*  Getting a reference of the message about the current mode in Experiment 8! */
+const currentModeMessageArea = document.getElementById('experiment-8-message');
+
+/*  Getting a reference of the message about the current mode in Experiment 8! */
+let currentSavedMode = localStorage.getItem('theme');
+
+// Then, will either applies the saved mode or defaults to light mode
+if(currentSavedMode){
+    setMode(currentSavedMode);
+} else {
+    setMode('light');
+}
+
+/* 
+    Apply appropriate class to Experiment 8's components depending on
+    whether the current mode is light mode or dark mode
+*/
+function setMode(mode){
+    if(mode === 'dark'){
+        modifiedComponents.classList.add('darkMode');
+        modifiedComponents.classList.remove('lightMode');
+    } else {
+        modifiedComponents.classList.add('lightMode');
+        modifiedComponents.classList.remove('darkMode');
+    }
+}
+
+/* 
+    Toggle between light and dark mode with a mouse click on the toggle button 
+    and apply the changes on Experiment 7's components 
+*/
+colorSchemeToggleSwitch.addEventListener('click', () => {
+    /*
+        Checks if darkMode class is currently used. If so, it's currently dark mode; 
+        otherwise, it's currently light mode! 
+    */
+    let currentMode = modifiedComponents.classList.contains('darkMode') ? 'dark' : 'light';
+
+    //  Switch to the other mode 
+    if(currentMode === 'dark'){
+        setMode('light');
+        localStorage.setItem('theme', 'light');
+        currentModeMessageArea.textContent = `Welcome to Light Mode!`;
+    } else {
+        setMode('dark');
+        localStorage.setItem('theme', 'dark');
+        currentModeMessageArea.textContent = `Welcome to Dark Mode!`;
+    }
+});
