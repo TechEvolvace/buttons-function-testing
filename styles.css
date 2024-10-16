@@ -323,12 +323,16 @@ section.experiment-8-components > header {
 
 section.experiment-8-components > header > toggle-button#toggle-switch{
     background-color: var(--experiment-8-button-color);
+    width: 3.75em;
+    height: 3%;
+    border-radius: 20px;
+    justify-content: space-between;
 }
 
 section.experiment-8-components > header > toggle-button#toggle-switch > svg{
     fill: var(--experiment-8-icon-color);
-    width: 2em;
-    height: 2em;
+    width: 1.5em;
+    height: 1.5em;
 }
 
 section.experiment-8-components > message-area{
