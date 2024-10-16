@@ -220,8 +220,8 @@ section.code-snippets{
     --experiment-8-text-color: black;
     --experiment-8-background-color: #FFE4f2; 
     --experiment-8-icon-color: rgb(60, 116, 218);
-    --experiment-8-button-inset-shadow: rgba(255, 197, 211, 0.4);
-
+    --experiment-8-button-inset-shadow: rgba(0, 0, 0, 0.4);
+    --experiment-8-button-inside-area: rgba(255, 197, 211, 0.4);
 
 }
 
@@ -235,10 +235,12 @@ section.code-snippets{
     --experiment-7-icon-color: rgb(9, 241, 225);
 
     /* For Experiment 8 dark mode color scheme */
-    --experiment-8-button-color: #5151B0;
+    --experiment-8-button-color: rgba(81, 81, 176, 1);
     --experiment-8-text-color: white;
     --experiment-8-background-color: #060660;
     --experiment-8-icon-color: rgb(9, 241, 225);
+    --experiment-8-button-inset-shadow: rgba(0, 0, 0, 0.6);
+    --experiment-8-button-inside-area: rgba(98, 98, 199, 0.6);
 }
 
 /* Section containing Experiment 7 components */
@@ -328,7 +330,7 @@ section.experiment-8-components > header > toggle-button#toggle-switch{
     height: 3%;
     border-radius: 20px;
     justify-content: space-between;
-    box-shadow: inset 0px 2px 6px rgba(0, 0, 0, 0.4), inset 0px -5px 10px var(--experiment-8-button-inset-shadow);
+    box-shadow: inset 0px 2px 6px var(--experiment-8-button-inset-shadow), inset 0px -5px 10px var(--experiment-8-button-inside-area);
 }
 
 section.experiment-8-components > header > toggle-button#toggle-switch > svg{
