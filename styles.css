@@ -329,14 +329,20 @@ section.experiment-8-components > header > toggle-button#toggle-switch{
     width: 3.75em;
     height: 3%;
     border-radius: 20px;
-    justify-content: space-between;
+    justify-content: center;
+    align-items: center;
     box-shadow: inset 0px 2px 6px var(--experiment-8-button-inset-shadow), inset 0px -5px 10px var(--experiment-8-button-inside-area);
 }
 
-section.experiment-8-components > header > toggle-button#toggle-switch > svg{
+section.experiment-8-components > header > toggle-button#toggle-switch > switch-icons.icon-wrapper{
+    justify-content: space-between;
+}
+
+section.experiment-8-components > header > toggle-button#toggle-switch > switch-icons.icon-wrapper > svg{
     fill: var(--experiment-8-icon-color);
     width: 1.5em;
     height: 1.5em;
+    margin: 0.1em 0;
 }
 
 section.experiment-8-components > message-area{
