@@ -316,6 +316,7 @@ section.experiment-8-components {
     display: flex;
     flex-direction: column;
     background-color: var(--experiment-8-background-color);
+    border-radius: 20px;
 }
 
 section.experiment-8-components > header {
@@ -343,4 +344,5 @@ section.experiment-8-components > message-area{
     display: flex;
     justify-content: center;
     color: var(--experiment-8-text-color);
+    padding: 2em 0;
 }
