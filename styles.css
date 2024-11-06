@@ -332,6 +332,7 @@ section.experiment-8-components > header > toggle-button#toggle-switch{
     justify-content: center;
     align-items: center;
     box-shadow: inset 0px 2px 6px var(--experiment-8-button-inset-shadow), inset 0px -5px 10px var(--experiment-8-button-inside-area);
+    z-index: 1;
 }
 
 section.experiment-8-components > header > toggle-button#toggle-switch > switch-icons.icon-wrapper{
@@ -343,10 +344,31 @@ section.experiment-8-components > header > toggle-button#toggle-switch > switch-
     width: 1.5em;
     height: 1.5em;
     margin: 0.1em 0;
+    z-index: 1;
 }
 
 section.experiment-8-components > message-area{
     display: flex;
     justify-content: center;
     color: var(--experiment-8-text-color);
+}
+
+section.experiment-8-components > header > toggle-button#toggle-switch > switch-icons.icon-wrapper > #active-icon{
+    position: absolute;
+    width: 1.5em;
+    height: 1.5em;
+    border-radius: 50%;
+    transition: transform 0.5s ease;
+    background-color: var(--experiment-8-background-color);
+    border: 2px solid var(--experiment-8-icon-color);
+    z-index: -1;
+    padding: 0.1em;
+}
+
+section.experiment-8-components.light-mode > header > toggle-button#toggle-switch > switch-icons.icon-wrapper > #active-icon{
+    transform: translateX(0);
+}
+
+section.experiment-8-components.dark-mode > header > toggle-button#toggle-switch > switch-icons.icon-wrapper > #active-icon{
+    transform: translateX(100%);
 }
