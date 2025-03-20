@@ -351,6 +351,7 @@ section.experiment-8-components > message-area{
     display: flex;
     justify-content: center;
     color: var(--experiment-8-text-color);
+    margin-bottom: 1em;
 }
 
 section.experiment-8-components > header > toggle-button#toggle-switch > switch-icons.icon-wrapper > #active-icon{
