@@ -3,10 +3,17 @@
     color: white;
 }
 
-.survey-prompt-area{
+.website-feedback-survey{
+    background-color: darkgreen;
     display: flex;
     flex-direction: column;
     padding: 1em;
+}
+
+.survey-prompt-area{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 0.5em;
 }
 
 .survey-prompt{
