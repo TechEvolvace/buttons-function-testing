@@ -2,3 +2,9 @@
     background-color: blue;
     color: white;
 }
+
+.survey-question{
+    display: flex;
+    flex-direction: column;
+    padding: 1em;
+}
