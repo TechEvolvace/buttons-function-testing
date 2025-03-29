@@ -2,3 +2,21 @@
     background-color: blue;
     color: white;
 }
+
+.website-feedback-survey{
+    background-color: darkgreen;
+    display: flex;
+    flex-direction: column;
+    padding: 1em;
+}
+
+.survey-prompt-area{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 0.5em;
+}
+
+.survey-prompt{
+    font-size: 1.5em;
+    margin-bottom: 0.4em;
+}
