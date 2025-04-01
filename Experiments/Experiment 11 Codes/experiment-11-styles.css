@@ -3,6 +3,10 @@
     color: white;
 }
 
+.experiment-11-heading{
+    padding: 0.5em 1em 0;
+}
+
 .website-feedback-survey{
     background-color: darkgreen;
     display: flex;
