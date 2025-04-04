@@ -35,3 +35,18 @@
     display: block;
     font-size: 16px;
 }
+
+/* Flexibly arrange the rating buttons horizontally */
+.form-group {
+    display: flex;
+}
+
+/* 
+    Removed the rating numbers that were defaultly 
+    attached with each radio button!
+*/
+.form-check-inline span {
+    padding-right: 2%;
+    cursor: pointer;
+    color: transparent;
+}
