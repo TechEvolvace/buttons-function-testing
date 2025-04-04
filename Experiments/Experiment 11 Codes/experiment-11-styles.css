@@ -63,3 +63,19 @@
     content: '\2606';
     color: gold;
 }
+
+/* 
+    Handles interactive display of the gold stars
+    radio buttons based on the user's selected 
+    rating!
+*/
+.form-check-inline span:hover:before,
+.form-check-inline span:hover~span:before {
+  content: '\2605';
+  color: gold;
+}
+
+.form-check-inline .rating:checked~span:before {
+    content: '\2605';
+    color: gold;
+}
