@@ -110,3 +110,19 @@
   content: '\2605';
   color: gold;
 }
+
+/* Provide correct display of gold stars when user rates 4 stars! */
+.form-group:has(input[id="4"]:checked) input[id='1']+span:before,
+.form-group:has(input[id="4"]:checked) input[id='2']+span:before,
+.form-group:has(input[id="4"]:checked) input[id='3']+span:before {
+  content: '\2605';
+  color: gold;
+}
+
+/* Provide correct hover display of gold stars when user rates 4 stars! */
+.form-group:has(input[id="4"]:hover) input[id='1']+span:before,
+.form-group:has(input[id="4"]:hover) input[id='2']+span:before,
+.form-group:has(input[id="4"]:hover) input[id='3']+span:before{
+  content: '\2605';
+  color: gold;
+}
