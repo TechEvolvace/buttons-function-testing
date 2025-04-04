@@ -41,6 +41,11 @@
     display: flex;
 }
 
+
+.form-check-inline .rating {
+    display: none;
+}
+
 /* 
     Removed the rating numbers that were defaultly 
     attached with each radio button!
@@ -49,4 +54,12 @@
     padding-right: 2%;
     cursor: pointer;
     color: transparent;
+}
+
+/*
+    Transform each radio button into gold stars!
+*/
+.form-check-inline span:before {
+    content: '\2606';
+    color: gold;
 }
