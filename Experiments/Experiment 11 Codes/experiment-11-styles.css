@@ -35,3 +35,78 @@
     display: block;
     font-size: 16px;
 }
+
+/* Flexibly arrange the rating buttons horizontally */
+.form-group {
+    display: flex;
+}
+
+
+.form-check-inline .rating {
+    display: none;
+}
+
+/* 
+    Removed the rating numbers that were defaultly 
+    attached with each radio button!
+*/
+.form-check-inline span {
+    padding-right: 2%;
+    cursor: pointer;
+    color: transparent;
+}
+
+/*
+    Transform each radio button into gold stars!
+*/
+.form-check-inline span:before {
+    content: '\2606';
+    color: gold;
+}
+
+/* 
+    Handles interactive display of the gold stars
+    radio buttons based on the user's selected 
+    rating!
+*/
+.form-check-inline span:hover:before,
+.form-check-inline span:hover~span:before {
+  content: '\2605';
+  color: gold;
+}
+
+.form-check-inline .rating:checked~span:before {
+    content: '\2605';
+    color: gold;
+}
+
+.form-check-inline .rating:checked~span:before {
+    content: '\2605';
+    color: gold;
+}
+
+/* Provide correct display of gold stars when user rates 2 stars! */
+.form-group:has(input[id="2"]:checked) input[id='1']+span:before {
+    content: '\2605';
+    color: gold;
+}
+
+/* Provide correct display of gold stars when user rates 3 stars! */
+.form-group:has(input[id="3"]:checked) input[id='1']+span:before,
+.form-group:has(input[id="3"]:checked) input[id='2']+span:before {
+  content: '\2605';
+  color: gold;
+}
+
+/* Provide correct hover display of gold stars when user rates 2 stars! */
+.form-group:has(input[id="2"]:hover) input[id='1']+span:before {
+    content: '\2605';
+    color: gold;
+}
+
+/* Provide correct hover display of gold stars when user rates 3 stars! */
+.form-group:has(input[id="3"]:hover) input[id='1']+span:before,
+.form-group:has(input[id="3"]:hover) input[id='2']+span:before {
+  content: '\2605';
+  color: gold;
+}
