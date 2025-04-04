@@ -79,3 +79,34 @@
     content: '\2605';
     color: gold;
 }
+
+.form-check-inline .rating:checked~span:before {
+    content: '\2605';
+    color: gold;
+}
+
+/* Provide correct display of gold stars when user rates 2 stars! */
+.form-group:has(input[id="2"]:checked) input[id='1']+span:before {
+    content: '\2605';
+    color: gold;
+}
+
+/* Provide correct display of gold stars when user rates 3 stars! */
+.form-group:has(input[id="3"]:checked) input[id='1']+span:before,
+.form-group:has(input[id="3"]:checked) input[id='2']+span:before {
+  content: '\2605';
+  color: gold;
+}
+
+/* Provide correct hover display of gold stars when user rates 2 stars! */
+.form-group:has(input[id="2"]:hover) input[id='1']+span:before {
+    content: '\2605';
+    color: gold;
+}
+
+/* Provide correct hover display of gold stars when user rates 3 stars! */
+.form-group:has(input[id="3"]:hover) input[id='1']+span:before,
+.form-group:has(input[id="3"]:hover) input[id='2']+span:before {
+  content: '\2605';
+  color: gold;
+}
