@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Input Functionality with Buttons Experiments</title>
     <link rel="stylesheet" href="./styles.css">
 
     <!-- Local storage for light or dark mode for Experiment 7 components design! -->
@@ -11,6 +11,12 @@
 
     <!-- Local storage for light or dark mode for Experiment 8 components design! -->
     <script type="text/javascript" src="./experiment-8-toggle-mode-switch.js" defer></script>
+
+    <!-- Importing CSS Files for all the experiments -->
+    <link rel="stylesheet" href="./Experiments/Experiment 9 Codes/experiment-9-styles.css">
+    <link rel="stylesheet" href="./Experiments/Experiment 10 Codes/experiment-10-styles.css">
+    <link rel="stylesheet" href="./Experiments/Experiment 11 Codes/experiment-11-styles.css">
+    <link rel="stylesheet" href="./Experiments/Experiment 12 Codes/experiment-12-styles.css">
 </head>
 <body>
     <nav>
@@ -529,10 +535,20 @@
             <section class="experiment-8-components" id="experiment-8-interactable-section">
                 <header>
                     <toggle-button id="toggle-switch">
-                        <!-- Light Mode Icon -->
-                        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#5f6368"><path d="M480-280q-83 0-141.5-58.5T280-480q0-83 58.5-141.5T480-680q83 0 141.5 58.5T680-480q0 83-58.5 141.5T480-280ZM200-440H40v-80h160v80Zm720 0H760v-80h160v80ZM440-760v-160h80v160h-80Zm0 720v-160h80v160h-80ZM256-650l-101-97 57-59 96 100-52 56Zm492 496-97-101 53-55 101 97-57 59Zm-98-550 97-101 59 57-100 96-56-52ZM154-212l101-97 55 53-97 101-59-57Z"/></svg>
-                        <!-- Dark Mode Icon -->
-                        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#5f6368"><path d="M480-120q-150 0-255-105T120-480q0-150 105-255t255-105q14 0 27.5 1t26.5 3q-41 29-65.5 75.5T444-660q0 90 63 153t153 63q55 0 101-24.5t75-65.5q2 13 3 26.5t1 27.5q0 150-105 255T480-120Z"/></svg>
+                        <switch-icons class="icon-wrapper">
+
+                            <!-- 
+                                This is the movable inner button part that moves when the user clicks on the toggle button, 
+                                will focus on the icon associated with the current mode icon 
+                            -->
+                            <active-icon id="active-icon"></active-icon>
+
+                            <!-- Light Mode Icon -->
+                            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#5f6368"><path d="M480-280q-83 0-141.5-58.5T280-480q0-83 58.5-141.5T480-680q83 0 141.5 58.5T680-480q0 83-58.5 141.5T480-280ZM200-440H40v-80h160v80Zm720 0H760v-80h160v80ZM440-760v-160h80v160h-80Zm0 720v-160h80v160h-80ZM256-650l-101-97 57-59 96 100-52 56Zm492 496-97-101 53-55 101 97-57 59Zm-98-550 97-101 59 57-100 96-56-52ZM154-212l101-97 55 53-97 101-59-57Z"/></svg>
+
+                            <!-- Dark Mode Icon -->
+                            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#5f6368"><path d="M480-120q-150 0-255-105T120-480q0-150 105-255t255-105q14 0 27.5 1t26.5 3q-41 29-65.5 75.5T444-660q0 90 63 153t153 63q55 0 101-24.5t75-65.5q2 13 3 26.5t1 27.5q0 150-105 255T480-120Z"/></svg>
+                        </switch-icons>
                     </toggle-button>
                 </header>
                 <message-area>
@@ -540,6 +556,179 @@
                         Welcome to Light Mode! 
                     </paragraph-text>
                 </message-area>
+            </section>
+        </div>
+
+        <div class="experiment-card">
+            <h2>Experiment 9: Implementing Options for User to Choose a Color Scheme</h2>
+            <section class="experiment-overview">
+                <h3>Overview</h3>
+                <p>
+                    Expanding on the concept of allowing user to toggle between different color scheme introduced through the 
+                    light or dark mode toggle switch in Experiment 7 and 8, Experiment 9 will implement a way for the user to 
+                    pick a specific color scheme out of multiple color scheme options. Each color scheme consist of 3 distinct color,
+                    where each color is applied to specific type of text content or the background.  
+                </p>
+            </section>
+
+            <section class="experiment-9-components">
+                <h1 class="experiment-9-heading">
+                    You can switch to a different color scheme for this experiment by clicking any of the other buttons below!
+                </h1>
+            </section>
+        </div>
+          
+        <div class="experiment-card">
+            <h2>Experiment 10: Implementing a Save System for Continue Reading a book later</h2>
+            <section class="experiment-overview">
+                <h3>Overview</h3>
+                <p>
+                    This experiment will implement a save button and a system
+                    where the user clicks on the save button to save their progress
+                    in a save file and can load their save file again to return to 
+                    their saved progress. 
+                </p>
+                <p>
+                    This save system is an integral part of video games today, but 
+                    this experiment will just perform a simple, non-bloated save system
+                    for anyone to save at a page in a book and can return to that same 
+                    page again.
+                </p>
+            </section>
+            <section class="experiment-10-components">
+                <h1 class="experiment-10-heading">
+                    There will be a button to save the current chapter you're on for a book, 
+                    and you can return to that chapter at any time you like. It's currently 
+                    in development now.
+                </h1>
+            </section>
+        </div>
+
+        <div class="experiment-card">
+            <h2>Experiment 11: Implementing a Functional Survey Form</h2>
+            <section class="experiment-overview">
+                <h3>Overview</h3>
+                <p>
+                    This experiment will implement a survey form where users can enter
+                    answers to some trivial questions, such as favorite color and number, 
+                    and submit the survey form.
+                </p>
+                <p>
+                    Then, the user can submit the form by clicking the Submit button. Finally,
+                    this experiment card will display a confirmation message that confirms that 
+                    the user answers has successfully been processed. There will also be a button 
+                    that asks if the user wants to submit a different survey form. There will also be 
+                    another button that asks if the user wants to see their responses on their most 
+                    recent survey form.
+                </p>
+                <p>
+                    This experiment demonstrates the functionality of the survey form, which is often 
+                    used to get user feedback on a website or anything else. For this experiment,
+                    this will be a survey to ask any visitor of their feedback for this website.
+                </p>
+            </section>
+            <section class="experiment-11-components">
+                <h1 class="experiment-11-heading">
+                    There will be a survey form that you can fill out to send a feedback about this website.
+                    It's currently in development now.
+                </h1>
+                <form id="website-feedback-form" class="website-feedback-survey">
+                    <h1>Website Feedback Survey</h1>
+                    <div class="survey-prompt-area">
+                        <label for="query-for-favored-features" class="survey-prompt">
+                            What features of this website do you like?
+                        </label>
+                        <textarea name="query-for-favored-features">
+                        </textarea>
+                    </div>
+                    <div class="survey-prompt-area">
+                        <label for="query-for-ratings" class="survey-prompt">
+                            Out of 5 stars, how would you rate this website in helping you understand new concepts about button functionality?
+                            Please also be very detailed in explaining why you assign this particular rating.
+                        </label>
+                        <div class="form-group">
+                            <div class="form-check-inline">
+                              <label class="form-check-label" for="1">
+                                    <input type="radio" id="1" value="1" name="rating" class="rating" />
+                                    <span class="wpcomment-input-option-label wpcomment-label-radio">1</span>
+                                </label>
+                            </div>
+                          
+                            <div class="form-check-inline">
+                              <label class="form-check-label" for="2">
+                                    <input type="radio" id="2" value="2" name="rating" class="rating" checked="checked" />
+                                    <span class="wpcomment-input-option-label wpcomment-label-radio">2</span>
+                                </label>
+                            </div>
+                          
+                            <div class="form-check-inline">
+                                <label class="form-check-label" for="3">
+                                    <input type="radio" id="3" value="3" name="rating" class="rating" />
+                                    <span class="wpcomment-input-option-label wpcomment-label-radio">3</span>
+                                </label>
+                            </div>
+
+                            <div class="form-check-inline">
+                                <label class="form-check-label" for="4">
+                                    <input type="radio" id="4" value="4" name="rating" class="rating" />
+                                    <span class="wpcomment-input-option-label wpcomment-label-radio">4</span>
+                                </label>
+                            </div>
+
+                            <div class="form-check-inline">
+                                <label class="form-check-label" for="5">
+                                    <input type="radio" id="5" value="5" name="rating" class="rating" />
+                                    <span class="wpcomment-input-option-label wpcomment-label-radio">5</span>
+                                </label>
+                            </div>
+                        </div>
+                        <textarea name="query-for-ratings">
+                        </textarea>
+                    </div>
+                    <div class="survey-prompt-area">
+                        <label for="query-for-improvements" class="survey-prompt">
+                            What kind of improvements to this website do you think
+                            should be implemented? Please be very detailed and descriptive.
+                        </label>
+                        <textarea name="query-for-improvements">
+                        </textarea>
+                    </div>
+                    <div class="survey-prompt-area">
+                        <label for="query-for-new-experiments" class="survey-prompt">
+                            What new experiment should I do next?
+                        </label>
+                        <textarea name="query-for-new-experiments">
+                        </textarea>
+                    </div>
+                    <button class="submit-button">
+                        Submit
+                    </button>
+                </form>
+            </section>
+        </div>
+
+        <div class="experiment-card">
+            <h2>Experiment 12: Implementing toggle slider to adjust font size of text</h2>
+            <section class="experiment-overview">
+                <h3>Overview</h3>
+                <p>
+                    This experiment will implement a toggle slider that allows visitors to adjust
+                    the font size of a sample text passage. 
+                </p>
+                <p>
+                    By giving users the option to adjust the font size of the text, this will help 
+                    users have more freedom in adjusting the font size of the text to help make the 
+                    text more comfortable to read. Thus, this toggle slider functionality to adjust 
+                    the font size of the content for a website is one of the important accessibility 
+                    functionalities to implement when designing and developing any website and/or 
+                    GUI-based applications!
+                </p>
+            </section>
+            <section class="experiment-12-components">
+                <h1 class="experiment-12-heading">
+                    There will be a toggle slider where you can drag with the mouse to adjust the size
+                    of the text here. It's currently in development now!
+                </h1>
             </section>
         </div>
     </main>
